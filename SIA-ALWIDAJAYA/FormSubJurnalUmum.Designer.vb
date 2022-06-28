@@ -67,6 +67,7 @@ Partial Class FormSubJurnalUmum
         'cbPeriode
         '
         Me.cbPeriode.FormattingEnabled = True
+        Me.cbPeriode.Items.AddRange(New Object() {"202206", "202207"})
         Me.cbPeriode.Location = New System.Drawing.Point(194, 28)
         Me.cbPeriode.Name = "cbPeriode"
         Me.cbPeriode.Size = New System.Drawing.Size(116, 21)
@@ -122,7 +123,7 @@ Partial Class FormSubJurnalUmum
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(744, 461)
+        Me.ClientSize = New System.Drawing.Size(744, 787)
         Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.btnYa)
