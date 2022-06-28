@@ -49,45 +49,6 @@ Public Class FormJurnalUmum
         DataGridView1.Columns.Add("Debet", "Debet")
         DataGridView1.Columns.Add("Kredit", "Kredit")
         DataGridView1.Columns.Add("DK", "DK")
-
-    End Sub
-
-    Public Sub PosisiListGrid()
-        With ListView1.Columns
-            .Add("No.Transaksi", 0)
-            .Add("No Akun", 68)
-            .Add("Nama Akun", 360)
-            .Add("Debet", 125, HorizontalAlignment.Right)
-            .Add("Kredit", 125, HorizontalAlignment.Right)
-            .Add("DK", 100)
-        End With
-    End Sub
-
-    Public Sub IsiListGridDJurnal()
-        Try
-            Query = "SELECT tbl_detailjurnal.NoTransaksi, tbl_detailjurnal.NoAkun, tbl_coa.NamaAkun, tbl_detailjurnal.DK, tbl_detailjurnal.Debet, tbl_detailjurnal.Kredit FROM (tbl_detailjurnal LEFT JOIN tbl_jurnalumum ON tbl_detailjurnal.NoTransaksi = tbl_jurnalumum.NoTransaksi) LEFT JOIN tbl_coa ON tbl_detailjurnal.NoAkun = tbl_coa.NoAkun WHERE(((tbl_detailjurnal.NoTransaksi) = '" & lblNoTransaksi.Text & "'))"
-            Da = New OleDbDataAdapter(Query, CONN)
-            Ds = New DataSet
-            Da.Fill(Ds)
-
-            ListView1.Items.Clear()
-            For a = 0 To Ds.Tables(0).Rows.Count - 1
-                With ListView1
-                    .Items.Add(Ds.Tables(0).Rows(a).Item(0))
-                    .Items(a).SubItems.Add(Ds.Tables(0).Rows(a).Item(1))
-                    .Items(a).SubItems.Add(Ds.Tables(0).Rows(a).Item(2))
-                    .Items(a).SubItems.Add(Ds.Tables(0).Rows(a).Item(3))
-                    .Items(a).SubItems.Add(Format(Ds.Tables(0).Rows(a).Item(4), "###,###"))
-                    .Items(a).SubItems.Add(Format(Ds.Tables(0).Rows(a).Item(5), "###,###"))
-                    If (a Mod 2 = 0) Then
-                        .Items(a).BackColor = Color.LightSteelBlue
-                    Else
-                        .Items(a).BackColor = Color.LightBlue
-                    End If
-                End With
-            Next
-        Catch ex As Exception
-        End Try
     End Sub
 
     Private Sub NoTransaksi()
