@@ -4,7 +4,7 @@ Public Class FormSubAkunSetup
     Private Sub PosisiList()
         With ListView1.Columns
             .Add("No Akun", 100)
-            .Add("Nama Akun", 405)
+            .Add("Nama Akun", 300)
         End With
     End Sub
 

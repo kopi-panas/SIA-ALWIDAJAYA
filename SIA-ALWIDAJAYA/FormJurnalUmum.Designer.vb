@@ -42,7 +42,6 @@ Partial Class FormJurnalUmum
         Me.btnSimpan = New System.Windows.Forms.Button()
         Me.btnBatal = New System.Windows.Forms.Button()
         Me.btnPreview = New System.Windows.Forms.Button()
-        Me.ListView1 = New System.Windows.Forms.ListView()
         Me.lblDebet = New System.Windows.Forms.Label()
         Me.lblKredit = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -235,18 +234,6 @@ Partial Class FormJurnalUmum
         Me.btnPreview.Text = "&Preview"
         Me.btnPreview.UseVisualStyleBackColor = True
         '
-        'ListView1
-        '
-        Me.ListView1.FullRowSelect = True
-        Me.ListView1.GridLines = True
-        Me.ListView1.Location = New System.Drawing.Point(75, 385)
-        Me.ListView1.MultiSelect = False
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(716, 56)
-        Me.ListView1.TabIndex = 24
-        Me.ListView1.UseCompatibleStateImageBehavior = False
-        Me.ListView1.View = System.Windows.Forms.View.Details
-        '
         'lblDebet
         '
         Me.lblDebet.BackColor = System.Drawing.Color.White
@@ -282,7 +269,7 @@ Partial Class FormJurnalUmum
         Me.DataGridView1.Location = New System.Drawing.Point(75, 197)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersVisible = False
-        Me.DataGridView1.Size = New System.Drawing.Size(715, 175)
+        Me.DataGridView1.Size = New System.Drawing.Size(715, 237)
         Me.DataGridView1.TabIndex = 28
         '
         'FormJurnalUmum
@@ -294,7 +281,6 @@ Partial Class FormJurnalUmum
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.lblKredit)
         Me.Controls.Add(Me.lblDebet)
-        Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.btnPreview)
         Me.Controls.Add(Me.btnKeluar)
         Me.Controls.Add(Me.btnHapus)
@@ -340,7 +326,6 @@ Partial Class FormJurnalUmum
     Friend WithEvents btnSimpan As System.Windows.Forms.Button
     Friend WithEvents btnBatal As System.Windows.Forms.Button
     Friend WithEvents btnPreview As System.Windows.Forms.Button
-    Friend WithEvents ListView1 As System.Windows.Forms.ListView
     Friend WithEvents lblDebet As System.Windows.Forms.Label
     Friend WithEvents lblKredit As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label

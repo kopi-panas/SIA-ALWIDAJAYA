@@ -202,9 +202,7 @@
     <Compile Include="FormSubAJP.Designer.vb">
       <DependentUpon>FormSubAJP.vb</DependentUpon>
     </Compile>
-    <Compile Include="FormSubAJP.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="FormSubAJP.vb" />
     <Compile Include="FormSubAkunAJP.Designer.vb">
       <DependentUpon>FormSubAkunAJP.vb</DependentUpon>
     </Compile>

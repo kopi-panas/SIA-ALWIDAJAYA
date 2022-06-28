@@ -151,4 +151,7 @@ Public Class FormPenjualanBarang
         End If
     End Sub
 
+    Private Sub txtKodeBrg_TextChanged(sender As Object, e As EventArgs) Handles txtKodeBrg.TextChanged
+
+    End Sub
 End Class

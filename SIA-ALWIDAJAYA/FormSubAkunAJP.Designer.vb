@@ -29,7 +29,7 @@ Partial Class FormSubAkunAJP
         '
         'btnYa
         '
-        Me.btnYa.Location = New System.Drawing.Point(124, 347)
+        Me.btnYa.Location = New System.Drawing.Point(127, 356)
         Me.btnYa.Name = "btnYa"
         Me.btnYa.Size = New System.Drawing.Size(80, 28)
         Me.btnYa.TabIndex = 17
@@ -38,7 +38,7 @@ Partial Class FormSubAkunAJP
         '
         'btnTidak
         '
-        Me.btnTidak.Location = New System.Drawing.Point(210, 347)
+        Me.btnTidak.Location = New System.Drawing.Point(213, 356)
         Me.btnTidak.Name = "btnTidak"
         Me.btnTidak.Size = New System.Drawing.Size(80, 28)
         Me.btnTidak.TabIndex = 18
@@ -52,7 +52,7 @@ Partial Class FormSubAkunAJP
         Me.ListView1.Location = New System.Drawing.Point(1, 1)
         Me.ListView1.MultiSelect = False
         Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(429, 335)
+        Me.ListView1.Size = New System.Drawing.Size(410, 335)
         Me.ListView1.TabIndex = 16
         Me.ListView1.UseCompatibleStateImageBehavior = False
         Me.ListView1.View = System.Windows.Forms.View.Details
@@ -61,7 +61,7 @@ Partial Class FormSubAkunAJP
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(427, 383)
+        Me.ClientSize = New System.Drawing.Size(413, 396)
         Me.ControlBox = False
         Me.Controls.Add(Me.btnYa)
         Me.Controls.Add(Me.btnTidak)

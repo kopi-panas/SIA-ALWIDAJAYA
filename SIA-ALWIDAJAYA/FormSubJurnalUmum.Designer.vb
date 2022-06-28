@@ -27,10 +27,12 @@ Partial Class FormSubJurnalUmum
         Me.Label2 = New System.Windows.Forms.Label()
         Me.cbPeriode = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.ListView1 = New System.Windows.Forms.ListView()
         Me.btnYa = New System.Windows.Forms.Button()
         Me.btnKeluar = New System.Windows.Forms.Button()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.ListView1 = New System.Windows.Forms.ListView()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -39,9 +41,9 @@ Partial Class FormSubJurnalUmum
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.cbPeriode)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
+        Me.GroupBox1.Location = New System.Drawing.Point(27, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(719, 103)
+        Me.GroupBox1.Size = New System.Drawing.Size(684, 103)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
@@ -58,7 +60,7 @@ Partial Class FormSubJurnalUmum
         Me.Label2.Font = New System.Drawing.Font("Arial Narrow", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(105, 60)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(82, 16)
+        Me.Label2.Size = New System.Drawing.Size(83, 16)
         Me.Label2.TabIndex = 12
         Me.Label2.Text = "No. Transaksi:"
         '
@@ -76,22 +78,9 @@ Partial Class FormSubJurnalUmum
         Me.Label1.Font = New System.Drawing.Font("Arial Narrow", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(136, 33)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(51, 16)
+        Me.Label1.Size = New System.Drawing.Size(52, 16)
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "Periode:"
-        '
-        'ListView1
-        '
-        Me.ListView1.FullRowSelect = True
-        Me.ListView1.GridLines = True
-        Me.ListView1.HideSelection = False
-        Me.ListView1.Location = New System.Drawing.Point(12, 121)
-        Me.ListView1.MultiSelect = False
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(720, 285)
-        Me.ListView1.TabIndex = 3
-        Me.ListView1.UseCompatibleStateImageBehavior = False
-        Me.ListView1.View = System.Windows.Forms.View.Details
         '
         'btnYa
         '
@@ -111,14 +100,33 @@ Partial Class FormSubJurnalUmum
         Me.btnKeluar.Text = "&Keluar"
         Me.btnKeluar.UseVisualStyleBackColor = True
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(27, 352)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowHeadersVisible = False
+        Me.DataGridView1.Size = New System.Drawing.Size(684, 38)
+        Me.DataGridView1.TabIndex = 29
+        '
+        'ListView1
+        '
+        Me.ListView1.Location = New System.Drawing.Point(27, 128)
+        Me.ListView1.Name = "ListView1"
+        Me.ListView1.Size = New System.Drawing.Size(683, 189)
+        Me.ListView1.TabIndex = 30
+        Me.ListView1.UseCompatibleStateImageBehavior = False
+        '
         'FormSubJurnalUmum
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(744, 461)
+        Me.Controls.Add(Me.ListView1)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.btnYa)
         Me.Controls.Add(Me.btnKeluar)
-        Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
@@ -130,6 +138,7 @@ Partial Class FormSubJurnalUmum
         Me.Text = "Data Transaksi"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -138,7 +147,8 @@ Partial Class FormSubJurnalUmum
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents txtNoTransaksi As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents ListView1 As System.Windows.Forms.ListView
     Friend WithEvents btnYa As System.Windows.Forms.Button
     Friend WithEvents btnKeluar As System.Windows.Forms.Button
+    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents ListView1 As System.Windows.Forms.ListView
 End Class

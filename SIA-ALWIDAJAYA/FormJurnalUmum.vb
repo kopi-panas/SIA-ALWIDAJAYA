@@ -30,20 +30,15 @@ Public Class FormJurnalUmum
     End Sub
 
     Public Sub PosisiGrid()
-        'Try
-        'DataGridView1.Columns(0).Width = 0
         DataGridView1.Columns(0).Width = 90
         DataGridView1.Columns(1).Width = 300
         DataGridView1.Columns(2).Width = 160
         DataGridView1.Columns(3).Width = 160
         DataGridView1.Columns(4).Width = 100
-        'Catch ex As Exception
-        'End Try
     End Sub
 
     Sub BuatKolom()
         DataGridView1.Columns.Clear()
-        'DataGridView1.Columns.Add("NoTransaksi", "NoTransaksi")
         DataGridView1.Columns.Add("NoAkun", "No. Akun")
         DataGridView1.Columns.Add("NamaAkun", "Nama Akun")
         DataGridView1.Columns.Add("Debet", "Debet")
@@ -86,25 +81,6 @@ Public Class FormJurnalUmum
         End Try
     End Sub
 
-    Public Sub TotalDebetKredit()
-        Try
-            QueryDebetKredit = "SELECT tbl_detailjurnal.NoTransaksi, Sum(tbl_detailjurnal.Debet) AS TotalDebet, Sum(tbl_detailjurnal.Kredit) AS TotalKredit FROM(tbl_detailjurnal) GROUP BY tbl_detailjurnal.NoTransaksi HAVING (((tbl_detailjurnal.NoTransaksi)= '" & lblNoTransaksi.Text & "'))"
-            DaDebetKredit = New OleDbDataAdapter(QueryDebetKredit, CONN)
-            DsDebetKredit = New DataSet
-            DaDebetKredit.Fill(DsDebetKredit)
-
-            With DsDebetKredit.Tables(0).Rows(0)
-                Dim i As Integer
-                i = DataGridView1.CurrentRow.Index
-                lblDebet.Text = DataGridView1.Rows(i).Cells(2).Value
-                lblKredit.Text = DataGridView1.Rows(i).Cells(3).Value
-                'lblDebet.Text = Format(.Item(1), "#,#")
-                'lblKredit.Text = Format(.Item(2), "#,#")
-            End With
-        Catch ex As Exception
-        End Try
-    End Sub
-
     Sub RumusSubDebet()
         Dim hitungdeb As Integer = 0
         For i As Integer = 0 To DataGridView1.Rows.Count - 1
@@ -121,69 +97,13 @@ Public Class FormJurnalUmum
         Next
     End Sub
 
-    Private Sub btnTambah_Click(sender As Object, e As EventArgs) Handles btnTambah.Click
+    Public Sub IsiListGridDJurnal()
         Try
-            If txtKeterangan.Text = "" Or txtNoAkun.Text = "" Or lblNamaAkun.Text = "" Or txtDebet.Text = "" Or txtKredit.Text = "" Then
-                MsgBox("Data Tidak Lengkap, Silahkan lengkapi terlebih dahulu!", MsgBoxStyle.Information, "")
-
-                'ElseIf lblDebet.Text <> lblKredit.Text Then
-                '    MsgBox("Jumlah debet dan kredit tidak seimbang, silahkan periksa", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Pesan")
-                '    txtNoAkun.Enabled = True
-                '    txtNoAkun.Focus()
-            Else
-                
-
-                If txtDebet.Text = "" Then
-                    txtDebet.Text = 0
-                Else
-                    txtDebet.Text = txtDebet.Text
-                End If
-
-                If txtKredit.Text = "" Then
-                    txtKredit.Text = 0
-                Else
-                    txtKredit.Text = txtKredit.Text
-                End If
-                If txtDebet.Text > 0 Then
-                    mDK = "D"
-                Else
-                    mDK = "K"
-                End If
-                DataGridView1.Rows.Add(New String() {txtNoAkun.Text, lblNamaAkun.Text, txtDebet.Text, txtKredit.Text, mDK})
-                RumusSubDebet()
-                RumusSubKredit()
-                txtNoAkun.Text = ""
-                lblNamaAkun.Text = ""
-                txtDebet.Text = "0"
-                txtKredit.Text = "0"
-                'lblDebet.Text = "0"
-                'lblKredit.Text = "0"
-                btnSimpan.Enabled = True
-            End If
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
-    End Sub
-
-    Private Sub AmbilData()
-        Try
-            With ListView1.SelectedItems
-                mNoTransaksi = .Item(0).SubItems(0).Text
-                txtNoAkun.Text = .Item(0).SubItems(1).Text
-                lblNamaAkun.Text = .Item(0).SubItems(2).Text
-                mDK = .Item(0).SubItems(3).Text
-                If .Item(0).SubItems(4).Text = "" Then
-                    txtDebet.Text = 0
-                Else
-                    txtDebet.Text = .Item(0).SubItems(4).Text
-                End If
-
-                If .Item(0).SubItems(5).Text = "" Then
-                    txtKredit.Text = 0
-                Else
-                    txtKredit.Text = .Item(0).SubItems(5).Text
-                End If
-            End With
+            Query = "SELECT tbl_detailjurnal.NoTransaksi, tbl_detailjurnal.NoAkun, tbl_coa.NamaAkun, tbl_detailjurnal.DK, tbl_detailjurnal.Debet, tbl_detailjurnal.Kredit FROM (tbl_detailjurnal LEFT JOIN tbl_jurnalumum ON tbl_detailjurnal.NoTransaksi = tbl_detailjurnal.NoTransaksi) LEFT JOIN tbl_coa ON tbl_detailjurnal.NoAkun = tbl_coa.NoAkun WHERE(((tbl_detailjurnal.NoTransaksi) = '" & lblNoTransaksi.Text & "'))"
+            Da = New OleDbDataAdapter(Query, CONN)
+            Ds = New DataSet
+            Da.Fill(Ds)
+            DataGridView1.DataSource = (Ds.Tables("tbl_detailjurnal"))
         Catch ex As Exception
         End Try
     End Sub
@@ -209,9 +129,6 @@ Public Class FormJurnalUmum
             If Ds.Tables(0).Rows.Count - 1 Then
                 BersihkanIsian()
                 txtTgl.Focus()
-                ListView1.Clear()
-                PosisiListGrid()
-                IsiListGridDJurnal()
             Else
                 lblPeriode.Text = Ds.Tables(0).Rows(0).Item(0)
                 txtTgl.Text = Ds.Tables(0).Rows(0).Item(1)
@@ -219,8 +136,6 @@ Public Class FormJurnalUmum
                 txtKeterangan.Text = Ds.Tables(0).Rows(0).Item(3)
                 mPosted = Ds.Tables(0).Rows(0).Item(4)
 
-                IsiListGridDJurnal()
-                TotalDebetKredit()
             End If
         Catch ex As Exception
         End Try
@@ -250,16 +165,13 @@ Public Class FormJurnalUmum
             Da.Fill(Ds)
 
             If Ds.Tables(0).Rows.Count - 1 Then
-                MsgBox("Belum ada transksi jurnal....", MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, "Pesan simpan data")
+                MsgBox("Belum ada transaksi jurnal....", MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, "Pesan simpan data")
                 txtNoAkun.Focus()
             Else
                 PeriksaDataNoTransaksi()
                 BersihkanIsian()
                 BersihkanIsianGrid()
                 NoTransaksi()
-                ListView1.Clear()
-                PosisiListGrid()
-                IsiListGridDJurnal()
                 btnBatal.Text = "&Edit"
                 btnTambah.Text = "&Tambah"
             End If
@@ -286,26 +198,26 @@ Public Class FormJurnalUmum
         End Try
     End Sub
 
-    Private Sub EditJurnalGrid()
-        With objJurnal
-            Try
-                .EditDataHJurnal() 'edit hJurnal
+    'Private Sub EditJurnalGrid()
+    '    With objJurnal
+    '        Try
+    '            .EditDataHJurnal() 'edit hJurnal
 
-                If txtDebet.Text > 0 Then
-                    mDK = "D"
-                Else
-                    mDK = "K"
-                End If
-                .EditData() 'edit dJurnal
-                IsiListGridDJurnal()
-                BersihkanIsianGrid()
-                txtNoAkun.Enabled = True
-                lblNoTransaksi.Enabled = True
-                TotalDebetKredit()
-            Catch ex As Exception
-            End Try
-        End With
-    End Sub
+    '            If txtDebet.Text > 0 Then
+    '                mDK = "D"
+    '            Else
+    '                mDK = "K"
+    '            End If
+    '            .EditData() 'edit dJurnal
+    '            IsiListGridDJurnal()
+    '            BersihkanIsianGrid()
+    '            txtNoAkun.Enabled = True
+    '            lblNoTransaksi.Enabled = True
+    '            TotalDebetKredit()
+    '        Catch ex As Exception
+    '        End Try
+    '    End With
+    'End Sub
 
     Private Sub CariPeriode()
         Try
@@ -346,7 +258,6 @@ Public Class FormJurnalUmum
 
     Private Sub FormJurnalUmum_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
-            
             BukaKoneksi()
             KondisiAwal()
             Dim band As DataGridViewBand = DataGridView1.Columns(4)
@@ -356,13 +267,42 @@ Public Class FormJurnalUmum
     End Sub
 
     Private Sub btnKeluar_Click(sender As Object, e As EventArgs) Handles btnKeluar.Click
+        Me.Close()
+    End Sub
+
+    Private Sub btnTambah_Click(sender As Object, e As EventArgs) Handles btnTambah.Click
         Try
-            Dim ans As String
-            ans = MsgBox("Anda Yakin Ingin Keluar? Data Tidak Akan diSimpan!", MsgBoxStyle.YesNo, "Konfirmasi")
-            If ans = vbYes Then
-                Me.Close()
+            If txtKeterangan.Text = "" Or txtNoAkun.Text = "" Or lblNamaAkun.Text = "" Or txtDebet.Text = "" Or txtKredit.Text = "" Then
+                MsgBox("Data Tidak Lengkap, Silahkan lengkapi terlebih dahulu!", MsgBoxStyle.Information, "")
+            Else
+                If txtDebet.Text = "" Then
+                    txtDebet.Text = 0
+                Else
+                    txtDebet.Text = txtDebet.Text
+                End If
+
+                If txtKredit.Text = "" Then
+                    txtKredit.Text = 0
+                Else
+                    txtKredit.Text = txtKredit.Text
+                End If
+                If txtDebet.Text > 0 Then
+                    mDK = "D"
+                Else
+                    mDK = "K"
+                End If
+                DataGridView1.Rows.Add(New String() {txtNoAkun.Text, lblNamaAkun.Text, txtDebet.Text, txtKredit.Text, mDK})
+                RumusSubDebet()
+                RumusSubKredit()
+                txtNoAkun.Text = ""
+                lblNamaAkun.Text = ""
+                txtDebet.Text = "0"
+                txtKredit.Text = "0"
+                mPosted = "UnPosted"
+                btnSimpan.Enabled = True
             End If
         Catch ex As Exception
+            MsgBox(ex.Message)
         End Try
     End Sub
 
@@ -390,7 +330,6 @@ Public Class FormJurnalUmum
         End Try
     End Sub
 
-   
     Private Sub txtKredit_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtKredit.KeyPress
         With objJurnal
             If e.KeyChar = Chr(13) Then
@@ -421,8 +360,6 @@ Public Class FormJurnalUmum
                                 PeriksaDataNoTransaksi()
                             '.SimpanData() 'dJurnal
                                 mPosted = "UnPosted"
-                                TotalDebetKredit()
-                                IsiListGridDJurnal()
                                 BersihkanIsianGrid()
                                 txtNoAkun.Focus()
                             'EditJurnalGrid()
@@ -457,14 +394,12 @@ Public Class FormJurnalUmum
 
                                     .SimpanData() 'dJurnal
                                     mPosted = "UnPosted"
-                                    TotalDebetKredit()
 
-                                    IsiListGridDJurnal()
                                     BersihkanIsianGrid()
                                     txtNoAkun.Focus()
                                 Else
                                     btnBatal.Text = "&Edit"
-                                    EditJurnalGrid()
+                                    'EditJurnalGrid()
                                 End If
                             End If
                         Catch ex As Exception
@@ -616,12 +551,8 @@ Public Class FormJurnalUmum
                                     .HapusData()
                                     BersihkanIsian()
                                     BersihkanIsianGrid()
-                                    ListView1.Clear()
-                                    PosisiListGrid()
-                                    IsiListGridDJurnal()
                                     txtTgl.Focus()
                                     NoTransaksi()
-                                    TotalDebetKredit()
                                     btnBatal.Text = "&Edit"
                                     btnTambah.Text = "&Tambah"
                                     txtNoAkun.Enabled = True
@@ -640,10 +571,8 @@ Public Class FormJurnalUmum
                                     Exit Sub
                                 Case vbOK
                                     HapusIsiGrid()
-                                    IsiListGridDJurnal()
                                     BersihkanIsianGrid()
                                     txtNoAkun.Focus()
-                                    TotalDebetKredit()
                                     btnBatal.Text = "&Edit"
                                     btnTambah.Text = "&Tambah"
                                     txtNoAkun.Enabled = True
@@ -659,68 +588,6 @@ Public Class FormJurnalUmum
                 btnSimpan.Enabled = True
             End If
         End With
-    End Sub
-
-    Private Sub ListView1_DoubleClick(sender As Object, e As EventArgs) Handles ListView1.DoubleClick
-        Try
-            AmbilData()
-            lblNoTransaksi.Enabled = False
-            txtNoAkun.Enabled = False
-            btnBatal.Text = "&Update"
-            btnSimpan.Enabled = False
-        Catch ex As Exception
-        End Try
-    End Sub
-
-    Private Sub ListView1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles ListView1.KeyPress
-        If e.KeyChar = Chr(13) Then
-            Try
-                AmbilData()
-                lblNoTransaksi.Enabled = False
-                txtNoAkun.Enabled = False
-                btnBatal.Text = "&Update"
-            Catch ex As Exception
-            End Try
-        End If
-    End Sub
-
-    Private Sub ListView1_KeyUp(sender As Object, e As KeyEventArgs) Handles ListView1.KeyUp
-        Dim A As String
-
-        If e.KeyCode = Keys.Escape Then
-            BersihkanIsianGrid()
-            txtNoAkun.Enabled = True
-            txtNoAkun.Focus()
-            btnBatal.Text = "&Edit"
-            btnSimpan.Enabled = True
-        End If
-
-        If e.KeyCode = Keys.Delete Then
-            AmbilData()
-            A = MsgBox("Benar akan dihapus...", MsgBoxStyle.Question + MsgBoxStyle.OkCancel, "Informasi")
-            Select Case A
-                Case vbCancel
-                    txtNoAkun.Enabled = True
-                    btnSimpan.Enabled = True
-                    txtNoAkun.Focus()
-                    BersihkanIsianGrid()
-                    Exit Sub
-                Case vbOK
-                    If mPosted = "UnPosted" Then
-                        HapusIsiGrid()
-                        IsiListGridDJurnal()
-                        BersihkanIsianGrid()
-                        txtNoAkun.Enabled = True
-                        btnSimpan.Enabled = True
-                        txtNoAkun.Focus()
-                        TotalDebetKredit()
-                    Else
-                        MsgBox("Data ini sudah diposting, tidak bisa dihapus", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Pesan")
-                        BersihkanIsianGrid()
-                        btnSimpan.Enabled = True
-                    End If
-            End Select
-        End If
     End Sub
 
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
@@ -752,4 +619,24 @@ Public Class FormJurnalUmum
     Private Sub btnBatal_Click(sender As Object, e As EventArgs) Handles btnBatal.Click
         KondisiAwal()
     End Sub
+
+    Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
+        Try
+            Dim i As Integer
+            i = DataGridView1.CurrentRow.Index
+
+            txtNoAkun.Text = DataGridView1.Item(0, i).Value
+            lblNamaAkun.Text = DataGridView1.Item(1, i).Value
+            txtDebet.Text = DataGridView1.Item(2, i).Value
+            txtKredit.Text = DataGridView1.Item(3, i).Value
+            btnTambah.Enabled = False
+            btnSimpan.Enabled = False
+            btnBatal.Enabled = True
+            btnHapus.Enabled = True
+            btnKeluar.Enabled = True
+        Catch ex As Exception
+            MsgBox("Tidak ada data yang dipilih!", MsgBoxStyle.Information, "")
+        End Try
+    End Sub
+
 End Class

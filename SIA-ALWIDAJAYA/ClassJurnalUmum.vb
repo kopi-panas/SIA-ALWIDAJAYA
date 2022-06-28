@@ -10,15 +10,6 @@ Public Class ClassJurnalUmum
     Private mDebet As Long
     Private mKredit As Long
 
-    Public Sub TambahData()
-        With FormJurnalUmum
-            .BersihkanIsian()
-            .BersihkanIsianGrid()
-            .IsiListGridDJurnal()
-            .txtTgl.Focus()
-        End With
-    End Sub
-
     Public Function SimpanDataHJurnal()
         Try
             mNoTransaksi = FormJurnalUmum.lblNoTransaksi.Text

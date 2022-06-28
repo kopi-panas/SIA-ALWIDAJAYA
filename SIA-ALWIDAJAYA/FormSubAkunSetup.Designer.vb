@@ -52,7 +52,7 @@ Partial Class FormSubAkunSetup
         Me.ListView1.Location = New System.Drawing.Point(2, 1)
         Me.ListView1.MultiSelect = False
         Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(423, 335)
+        Me.ListView1.Size = New System.Drawing.Size(389, 335)
         Me.ListView1.TabIndex = 16
         Me.ListView1.UseCompatibleStateImageBehavior = False
         Me.ListView1.View = System.Windows.Forms.View.Details
@@ -61,7 +61,7 @@ Partial Class FormSubAkunSetup
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(426, 382)
+        Me.ClientSize = New System.Drawing.Size(393, 378)
         Me.ControlBox = False
         Me.Controls.Add(Me.btnYa)
         Me.Controls.Add(Me.btnTidak)

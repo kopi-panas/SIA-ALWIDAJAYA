@@ -22,6 +22,7 @@ Partial Class FormPosting
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormPosting))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.lblPeriodeBerikutnya = New System.Windows.Forms.Label()
         Me.cbPeriode = New System.Windows.Forms.ComboBox()
@@ -38,10 +39,11 @@ Partial Class FormPosting
         Me.GroupBox1.Controls.Add(Me.cbPeriode)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Top
         Me.GroupBox1.Font = New System.Drawing.Font("Arial Narrow", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(21, 23)
+        Me.GroupBox1.Location = New System.Drawing.Point(0, 0)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(404, 166)
+        Me.GroupBox1.Size = New System.Drawing.Size(408, 166)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Pilih Periode:"
@@ -50,7 +52,7 @@ Partial Class FormPosting
         '
         Me.lblPeriodeBerikutnya.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.lblPeriodeBerikutnya.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblPeriodeBerikutnya.Location = New System.Drawing.Point(189, 94)
+        Me.lblPeriodeBerikutnya.Location = New System.Drawing.Point(200, 94)
         Me.lblPeriodeBerikutnya.Name = "lblPeriodeBerikutnya"
         Me.lblPeriodeBerikutnya.Size = New System.Drawing.Size(113, 25)
         Me.lblPeriodeBerikutnya.TabIndex = 3
@@ -58,7 +60,7 @@ Partial Class FormPosting
         'cbPeriode
         '
         Me.cbPeriode.FormattingEnabled = True
-        Me.cbPeriode.Location = New System.Drawing.Point(189, 61)
+        Me.cbPeriode.Location = New System.Drawing.Point(200, 61)
         Me.cbPeriode.Name = "cbPeriode"
         Me.cbPeriode.Size = New System.Drawing.Size(113, 24)
         Me.cbPeriode.TabIndex = 2
@@ -66,7 +68,7 @@ Partial Class FormPosting
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(39, 95)
+        Me.Label2.Location = New System.Drawing.Point(50, 95)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(144, 16)
         Me.Label2.TabIndex = 1
@@ -75,7 +77,7 @@ Partial Class FormPosting
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(48, 64)
+        Me.Label1.Location = New System.Drawing.Point(59, 64)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(135, 16)
         Me.Label1.TabIndex = 0
@@ -83,27 +85,36 @@ Partial Class FormPosting
         '
         'btnPosting
         '
-        Me.btnPosting.Location = New System.Drawing.Point(135, 206)
+        Me.btnPosting.Font = New System.Drawing.Font("Microsoft Tai Le", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPosting.Image = CType(resources.GetObject("btnPosting.Image"), System.Drawing.Image)
+        Me.btnPosting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnPosting.Location = New System.Drawing.Point(114, 190)
         Me.btnPosting.Name = "btnPosting"
-        Me.btnPosting.Size = New System.Drawing.Size(80, 28)
+        Me.btnPosting.Size = New System.Drawing.Size(80, 31)
         Me.btnPosting.TabIndex = 22
         Me.btnPosting.Text = "&Posting"
+        Me.btnPosting.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnPosting.UseVisualStyleBackColor = True
         '
         'btnKeluar
         '
-        Me.btnKeluar.Location = New System.Drawing.Point(221, 206)
+        Me.btnKeluar.Font = New System.Drawing.Font("Microsoft Tai Le", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnKeluar.Image = CType(resources.GetObject("btnKeluar.Image"), System.Drawing.Image)
+        Me.btnKeluar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnKeluar.Location = New System.Drawing.Point(200, 190)
         Me.btnKeluar.Name = "btnKeluar"
-        Me.btnKeluar.Size = New System.Drawing.Size(80, 28)
+        Me.btnKeluar.Size = New System.Drawing.Size(80, 31)
         Me.btnKeluar.TabIndex = 23
         Me.btnKeluar.Text = "&Keluar"
+        Me.btnKeluar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnKeluar.UseVisualStyleBackColor = True
         '
         'FormPosting
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(443, 268)
+        Me.ClientSize = New System.Drawing.Size(408, 233)
+        Me.ControlBox = False
         Me.Controls.Add(Me.btnPosting)
         Me.Controls.Add(Me.btnKeluar)
         Me.Controls.Add(Me.GroupBox1)

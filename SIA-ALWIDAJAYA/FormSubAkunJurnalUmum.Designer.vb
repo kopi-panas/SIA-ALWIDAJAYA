@@ -34,14 +34,14 @@ Partial Class FormSubAkunJurnalUmum
         Me.ListView1.Location = New System.Drawing.Point(2, 3)
         Me.ListView1.MultiSelect = False
         Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(518, 335)
+        Me.ListView1.Size = New System.Drawing.Size(409, 335)
         Me.ListView1.TabIndex = 4
         Me.ListView1.UseCompatibleStateImageBehavior = False
         Me.ListView1.View = System.Windows.Forms.View.Details
         '
         'btnYa
         '
-        Me.btnYa.Location = New System.Drawing.Point(166, 344)
+        Me.btnYa.Location = New System.Drawing.Point(122, 352)
         Me.btnYa.Name = "btnYa"
         Me.btnYa.Size = New System.Drawing.Size(80, 28)
         Me.btnYa.TabIndex = 14
@@ -50,7 +50,7 @@ Partial Class FormSubAkunJurnalUmum
         '
         'btnTidak
         '
-        Me.btnTidak.Location = New System.Drawing.Point(252, 344)
+        Me.btnTidak.Location = New System.Drawing.Point(208, 352)
         Me.btnTidak.Name = "btnTidak"
         Me.btnTidak.Size = New System.Drawing.Size(80, 28)
         Me.btnTidak.TabIndex = 15
@@ -61,7 +61,7 @@ Partial Class FormSubAkunJurnalUmum
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(523, 392)
+        Me.ClientSize = New System.Drawing.Size(413, 392)
         Me.Controls.Add(Me.btnYa)
         Me.Controls.Add(Me.btnTidak)
         Me.Controls.Add(Me.ListView1)
