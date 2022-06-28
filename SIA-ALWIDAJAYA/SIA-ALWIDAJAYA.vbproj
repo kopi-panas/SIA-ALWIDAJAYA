@@ -126,6 +126,12 @@
     <Compile Include="FormCetakRL.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormJurnalDetail.Designer.vb">
+      <DependentUpon>FormJurnalDetail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormJurnalDetail.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormJurnalUmum.Designer.vb">
       <DependentUpon>FormJurnalUmum.vb</DependentUpon>
     </Compile>
@@ -281,6 +287,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCetakRL.resx">
       <DependentUpon>FormCetakRL.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormJurnalDetail.resx">
+      <DependentUpon>FormJurnalDetail.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormJurnalUmum.resx">
       <DependentUpon>FormJurnalUmum.vb</DependentUpon>

@@ -104,17 +104,17 @@ Partial Class FormSubJurnalUmum
         '
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(27, 352)
+        Me.DataGridView1.Location = New System.Drawing.Point(27, 279)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersVisible = False
-        Me.DataGridView1.Size = New System.Drawing.Size(684, 38)
+        Me.DataGridView1.Size = New System.Drawing.Size(684, 111)
         Me.DataGridView1.TabIndex = 29
         '
         'ListView1
         '
         Me.ListView1.Location = New System.Drawing.Point(27, 128)
         Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(683, 189)
+        Me.ListView1.Size = New System.Drawing.Size(683, 125)
         Me.ListView1.TabIndex = 30
         Me.ListView1.UseCompatibleStateImageBehavior = False
         '
