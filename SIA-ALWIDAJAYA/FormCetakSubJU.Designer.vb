@@ -43,6 +43,9 @@ Partial Class FormCetakSubJU
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.cbPeriodeNS = New System.Windows.Forms.ComboBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.jurnalumum.SuspendLayout()
         Me.Group.SuspendLayout()
@@ -61,7 +64,7 @@ Partial Class FormCetakSubJU
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(142, 197)
+        Me.Panel1.Size = New System.Drawing.Size(142, 205)
         Me.Panel1.TabIndex = 0
         '
         'btnNS
@@ -118,12 +121,13 @@ Partial Class FormCetakSubJU
         '
         'jurnalumum
         '
+        Me.jurnalumum.Controls.Add(Me.Label3)
         Me.jurnalumum.Controls.Add(Me.btnCetakJU)
         Me.jurnalumum.Controls.Add(Me.Group)
         Me.jurnalumum.Dock = System.Windows.Forms.DockStyle.Fill
         Me.jurnalumum.Location = New System.Drawing.Point(142, 0)
         Me.jurnalumum.Name = "jurnalumum"
-        Me.jurnalumum.Size = New System.Drawing.Size(281, 197)
+        Me.jurnalumum.Size = New System.Drawing.Size(288, 205)
         Me.jurnalumum.TabIndex = 1
         '
         'btnCetakJU
@@ -131,7 +135,7 @@ Partial Class FormCetakSubJU
         Me.btnCetakJU.Font = New System.Drawing.Font("Microsoft Tai Le", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCetakJU.Image = CType(resources.GetObject("btnCetakJU.Image"), System.Drawing.Image)
         Me.btnCetakJU.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCetakJU.Location = New System.Drawing.Point(106, 132)
+        Me.btnCetakJU.Location = New System.Drawing.Point(105, 142)
         Me.btnCetakJU.Name = "btnCetakJU"
         Me.btnCetakJU.Size = New System.Drawing.Size(74, 32)
         Me.btnCetakJU.TabIndex = 121
@@ -144,7 +148,7 @@ Partial Class FormCetakSubJU
         Me.Group.Controls.Add(Me.Label15)
         Me.Group.Controls.Add(Me.cbPeriodeJU)
         Me.Group.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Group.Location = New System.Drawing.Point(14, 55)
+        Me.Group.Location = New System.Drawing.Point(13, 65)
         Me.Group.Name = "Group"
         Me.Group.Size = New System.Drawing.Size(263, 54)
         Me.Group.TabIndex = 120
@@ -172,12 +176,13 @@ Partial Class FormCetakSubJU
         '
         'bukubesar
         '
+        Me.bukubesar.Controls.Add(Me.Label4)
         Me.bukubesar.Controls.Add(Me.btnCetakBB)
         Me.bukubesar.Controls.Add(Me.GroupBox1)
         Me.bukubesar.Dock = System.Windows.Forms.DockStyle.Fill
         Me.bukubesar.Location = New System.Drawing.Point(142, 0)
         Me.bukubesar.Name = "bukubesar"
-        Me.bukubesar.Size = New System.Drawing.Size(281, 197)
+        Me.bukubesar.Size = New System.Drawing.Size(288, 205)
         Me.bukubesar.TabIndex = 122
         '
         'btnCetakBB
@@ -185,7 +190,7 @@ Partial Class FormCetakSubJU
         Me.btnCetakBB.Font = New System.Drawing.Font("Microsoft Tai Le", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCetakBB.Image = CType(resources.GetObject("btnCetakBB.Image"), System.Drawing.Image)
         Me.btnCetakBB.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCetakBB.Location = New System.Drawing.Point(105, 125)
+        Me.btnCetakBB.Location = New System.Drawing.Point(111, 147)
         Me.btnCetakBB.Name = "btnCetakBB"
         Me.btnCetakBB.Size = New System.Drawing.Size(74, 32)
         Me.btnCetakBB.TabIndex = 123
@@ -198,7 +203,7 @@ Partial Class FormCetakSubJU
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.cbPeriodeBB)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(13, 48)
+        Me.GroupBox1.Location = New System.Drawing.Point(19, 70)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(263, 54)
         Me.GroupBox1.TabIndex = 122
@@ -226,12 +231,13 @@ Partial Class FormCetakSubJU
         '
         'neracasaldo
         '
+        Me.neracasaldo.Controls.Add(Me.Label5)
         Me.neracasaldo.Controls.Add(Me.btnCetakNS)
         Me.neracasaldo.Controls.Add(Me.GroupBox2)
         Me.neracasaldo.Dock = System.Windows.Forms.DockStyle.Fill
         Me.neracasaldo.Location = New System.Drawing.Point(142, 0)
         Me.neracasaldo.Name = "neracasaldo"
-        Me.neracasaldo.Size = New System.Drawing.Size(281, 197)
+        Me.neracasaldo.Size = New System.Drawing.Size(288, 205)
         Me.neracasaldo.TabIndex = 125
         '
         'btnCetakNS
@@ -239,7 +245,7 @@ Partial Class FormCetakSubJU
         Me.btnCetakNS.Font = New System.Drawing.Font("Microsoft Tai Le", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCetakNS.Image = CType(resources.GetObject("btnCetakNS.Image"), System.Drawing.Image)
         Me.btnCetakNS.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCetakNS.Location = New System.Drawing.Point(105, 125)
+        Me.btnCetakNS.Location = New System.Drawing.Point(105, 141)
         Me.btnCetakNS.Name = "btnCetakNS"
         Me.btnCetakNS.Size = New System.Drawing.Size(74, 32)
         Me.btnCetakNS.TabIndex = 123
@@ -252,7 +258,7 @@ Partial Class FormCetakSubJU
         Me.GroupBox2.Controls.Add(Me.Label2)
         Me.GroupBox2.Controls.Add(Me.cbPeriodeNS)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(13, 48)
+        Me.GroupBox2.Location = New System.Drawing.Point(13, 64)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(263, 54)
         Me.GroupBox2.TabIndex = 122
@@ -278,15 +284,45 @@ Partial Class FormCetakSubJU
         Me.cbPeriodeNS.Size = New System.Drawing.Size(160, 21)
         Me.cbPeriodeNS.TabIndex = 61
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(85, 27)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(116, 13)
+        Me.Label3.TabIndex = 63
+        Me.Label3.Text = "Cetak Jurnal Umum"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(92, 27)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(109, 13)
+        Me.Label4.TabIndex = 124
+        Me.Label4.Text = "Cetak Buku Besar"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(85, 27)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(121, 13)
+        Me.Label5.TabIndex = 124
+        Me.Label5.Text = "Cetak Neraca Saldo"
+        '
         'FormCetakSubJU
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(423, 197)
+        Me.ClientSize = New System.Drawing.Size(430, 205)
         Me.ControlBox = False
         Me.Controls.Add(Me.jurnalumum)
-        Me.Controls.Add(Me.bukubesar)
         Me.Controls.Add(Me.neracasaldo)
+        Me.Controls.Add(Me.bukubesar)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
@@ -298,12 +334,15 @@ Partial Class FormCetakSubJU
         Me.Text = "Cetak Jurnal Umum"
         Me.Panel1.ResumeLayout(False)
         Me.jurnalumum.ResumeLayout(False)
+        Me.jurnalumum.PerformLayout()
         Me.Group.ResumeLayout(False)
         Me.Group.PerformLayout()
         Me.bukubesar.ResumeLayout(False)
+        Me.bukubesar.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.neracasaldo.ResumeLayout(False)
+        Me.neracasaldo.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.ResumeLayout(False)
@@ -329,4 +368,7 @@ Partial Class FormCetakSubJU
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents cbPeriodeNS As System.Windows.Forms.ComboBox
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Label5 As System.Windows.Forms.Label
 End Class

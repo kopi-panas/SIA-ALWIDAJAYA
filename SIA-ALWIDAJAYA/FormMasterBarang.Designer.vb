@@ -22,6 +22,7 @@ Partial Class FormMasterBarang
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMasterBarang))
         Me.cbSatuan = New System.Windows.Forms.ComboBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -46,10 +47,11 @@ Partial Class FormMasterBarang
         '
         'cbSatuan
         '
+        Me.cbSatuan.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbSatuan.FormattingEnabled = True
         Me.cbSatuan.Location = New System.Drawing.Point(185, 133)
         Me.cbSatuan.Name = "cbSatuan"
-        Me.cbSatuan.Size = New System.Drawing.Size(121, 21)
+        Me.cbSatuan.Size = New System.Drawing.Size(121, 23)
         Me.cbSatuan.TabIndex = 56
         '
         'Label6
@@ -74,30 +76,34 @@ Partial Class FormMasterBarang
         '
         'txtJumlah
         '
+        Me.txtJumlah.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtJumlah.Location = New System.Drawing.Point(185, 109)
         Me.txtJumlah.Name = "txtJumlah"
-        Me.txtJumlah.Size = New System.Drawing.Size(121, 20)
+        Me.txtJumlah.Size = New System.Drawing.Size(121, 21)
         Me.txtJumlah.TabIndex = 52
         '
         'txtHarga
         '
+        Me.txtHarga.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtHarga.Location = New System.Drawing.Point(185, 85)
         Me.txtHarga.Name = "txtHarga"
-        Me.txtHarga.Size = New System.Drawing.Size(121, 20)
+        Me.txtHarga.Size = New System.Drawing.Size(121, 21)
         Me.txtHarga.TabIndex = 51
         '
         'txtNamaBarang
         '
+        Me.txtNamaBarang.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNamaBarang.Location = New System.Drawing.Point(185, 61)
         Me.txtNamaBarang.Name = "txtNamaBarang"
-        Me.txtNamaBarang.Size = New System.Drawing.Size(243, 20)
+        Me.txtNamaBarang.Size = New System.Drawing.Size(243, 21)
         Me.txtNamaBarang.TabIndex = 50
         '
         'txtKodeBarang
         '
+        Me.txtKodeBarang.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtKodeBarang.Location = New System.Drawing.Point(185, 38)
         Me.txtKodeBarang.Name = "txtKodeBarang"
-        Me.txtKodeBarang.Size = New System.Drawing.Size(134, 20)
+        Me.txtKodeBarang.Size = New System.Drawing.Size(134, 21)
         Me.txtKodeBarang.TabIndex = 49
         '
         'Label4
@@ -132,47 +138,67 @@ Partial Class FormMasterBarang
         '
         'btnKeluar
         '
-        Me.btnKeluar.Location = New System.Drawing.Point(687, 193)
+        Me.btnKeluar.Font = New System.Drawing.Font("Leelawadee UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnKeluar.Image = CType(resources.GetObject("btnKeluar.Image"), System.Drawing.Image)
+        Me.btnKeluar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnKeluar.Location = New System.Drawing.Point(637, 193)
         Me.btnKeluar.Name = "btnKeluar"
-        Me.btnKeluar.Size = New System.Drawing.Size(80, 28)
+        Me.btnKeluar.Size = New System.Drawing.Size(75, 32)
         Me.btnKeluar.TabIndex = 62
         Me.btnKeluar.Text = "&Keluar"
+        Me.btnKeluar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnKeluar.UseVisualStyleBackColor = True
         '
         'btnHapus
         '
-        Me.btnHapus.Location = New System.Drawing.Point(357, 193)
+        Me.btnHapus.Font = New System.Drawing.Font("Leelawadee UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnHapus.Image = CType(resources.GetObject("btnHapus.Image"), System.Drawing.Image)
+        Me.btnHapus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnHapus.Location = New System.Drawing.Point(373, 193)
         Me.btnHapus.Name = "btnHapus"
-        Me.btnHapus.Size = New System.Drawing.Size(80, 28)
+        Me.btnHapus.Size = New System.Drawing.Size(75, 32)
         Me.btnHapus.TabIndex = 61
         Me.btnHapus.Text = "&Hapus"
+        Me.btnHapus.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnHapus.UseVisualStyleBackColor = True
         '
         'btnEdit
         '
-        Me.btnEdit.Location = New System.Drawing.Point(271, 193)
+        Me.btnEdit.Font = New System.Drawing.Font("Leelawadee UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEdit.Image = CType(resources.GetObject("btnEdit.Image"), System.Drawing.Image)
+        Me.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnEdit.Location = New System.Drawing.Point(293, 193)
         Me.btnEdit.Name = "btnEdit"
-        Me.btnEdit.Size = New System.Drawing.Size(80, 28)
+        Me.btnEdit.Size = New System.Drawing.Size(74, 32)
         Me.btnEdit.TabIndex = 60
         Me.btnEdit.Text = "&Edit"
+        Me.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnEdit.UseVisualStyleBackColor = True
         '
         'btnSimpan
         '
-        Me.btnSimpan.Location = New System.Drawing.Point(185, 193)
+        Me.btnSimpan.Font = New System.Drawing.Font("Leelawadee UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSimpan.Image = CType(resources.GetObject("btnSimpan.Image"), System.Drawing.Image)
+        Me.btnSimpan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnSimpan.Location = New System.Drawing.Point(210, 193)
         Me.btnSimpan.Name = "btnSimpan"
-        Me.btnSimpan.Size = New System.Drawing.Size(80, 28)
+        Me.btnSimpan.Size = New System.Drawing.Size(77, 32)
         Me.btnSimpan.TabIndex = 59
         Me.btnSimpan.Text = "&Simpan"
+        Me.btnSimpan.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnSimpan.UseVisualStyleBackColor = True
         '
         'btnTambah
         '
-        Me.btnTambah.Location = New System.Drawing.Point(99, 193)
+        Me.btnTambah.Font = New System.Drawing.Font("Leelawadee UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnTambah.Image = CType(resources.GetObject("btnTambah.Image"), System.Drawing.Image)
+        Me.btnTambah.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnTambah.Location = New System.Drawing.Point(124, 193)
         Me.btnTambah.Name = "btnTambah"
-        Me.btnTambah.Size = New System.Drawing.Size(80, 28)
+        Me.btnTambah.Size = New System.Drawing.Size(80, 32)
         Me.btnTambah.TabIndex = 58
         Me.btnTambah.Text = "&Tambah"
+        Me.btnTambah.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnTambah.UseVisualStyleBackColor = True
         '
         'GroupBox1
@@ -206,17 +232,22 @@ Partial Class FormMasterBarang
         '
         'btnCetak
         '
-        Me.btnCetak.Location = New System.Drawing.Point(443, 193)
+        Me.btnCetak.Font = New System.Drawing.Font("Leelawadee UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCetak.Image = CType(resources.GetObject("btnCetak.Image"), System.Drawing.Image)
+        Me.btnCetak.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnCetak.Location = New System.Drawing.Point(454, 193)
         Me.btnCetak.Name = "btnCetak"
-        Me.btnCetak.Size = New System.Drawing.Size(80, 28)
+        Me.btnCetak.Size = New System.Drawing.Size(75, 32)
         Me.btnCetak.TabIndex = 65
         Me.btnCetak.Text = "&Cetak"
+        Me.btnCetak.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnCetak.UseVisualStyleBackColor = True
         '
         'FormMasterBarang
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.ClientSize = New System.Drawing.Size(798, 524)
         Me.ControlBox = False
         Me.Controls.Add(Me.btnCetak)

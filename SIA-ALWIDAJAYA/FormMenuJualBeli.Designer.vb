@@ -142,7 +142,7 @@ Partial Class FormMenuJualBeli
         Me.btnBeli.Name = "btnBeli"
         Me.btnBeli.Size = New System.Drawing.Size(155, 38)
         Me.btnBeli.TabIndex = 1
-        Me.btnBeli.Text = "Transaksi Pembelian"
+        Me.btnBeli.Text = "Transaksi Penerimaan"
         Me.btnBeli.UseVisualStyleBackColor = True
         '
         'panelTerima

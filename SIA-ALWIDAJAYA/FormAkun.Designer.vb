@@ -164,7 +164,7 @@ Partial Class FormAkun
         Me.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnEdit.Location = New System.Drawing.Point(342, 154)
         Me.btnEdit.Name = "btnEdit"
-        Me.btnEdit.Size = New System.Drawing.Size(66, 30)
+        Me.btnEdit.Size = New System.Drawing.Size(78, 30)
         Me.btnEdit.TabIndex = 4
         Me.btnEdit.Text = "&Edit"
         Me.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -175,7 +175,7 @@ Partial Class FormAkun
         Me.btnHapus.Font = New System.Drawing.Font("Microsoft Tai Le", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnHapus.Image = CType(resources.GetObject("btnHapus.Image"), System.Drawing.Image)
         Me.btnHapus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnHapus.Location = New System.Drawing.Point(414, 154)
+        Me.btnHapus.Location = New System.Drawing.Point(426, 154)
         Me.btnHapus.Name = "btnHapus"
         Me.btnHapus.Size = New System.Drawing.Size(71, 30)
         Me.btnHapus.TabIndex = 5
@@ -198,7 +198,7 @@ Partial Class FormAkun
         Me.btnKeluar.Font = New System.Drawing.Font("Microsoft Tai Le", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnKeluar.Image = CType(resources.GetObject("btnKeluar.Image"), System.Drawing.Image)
         Me.btnKeluar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnKeluar.Location = New System.Drawing.Point(491, 154)
+        Me.btnKeluar.Location = New System.Drawing.Point(503, 154)
         Me.btnKeluar.Name = "btnKeluar"
         Me.btnKeluar.Size = New System.Drawing.Size(80, 30)
         Me.btnKeluar.TabIndex = 6
@@ -211,6 +211,7 @@ Partial Class FormAkun
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(759, 500)
+        Me.ControlBox = False
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.btnKeluar)
         Me.Controls.Add(Me.btnHapus)

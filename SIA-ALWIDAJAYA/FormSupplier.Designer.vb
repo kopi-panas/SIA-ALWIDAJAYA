@@ -22,6 +22,7 @@ Partial Class FormSupplier
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormSupplier))
         Me.txtTelepon = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.txtAlamatSupp = New System.Windows.Forms.TextBox()
@@ -53,7 +54,7 @@ Partial Class FormSupplier
         '
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(112, 217)
+        Me.DataGridView1.Location = New System.Drawing.Point(103, 217)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.Size = New System.Drawing.Size(514, 213)
@@ -122,49 +123,68 @@ Partial Class FormSupplier
         '
         'btnKeluar
         '
-        Me.btnKeluar.Location = New System.Drawing.Point(622, 169)
+        Me.btnKeluar.Font = New System.Drawing.Font("Leelawadee UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnKeluar.Image = CType(resources.GetObject("btnKeluar.Image"), System.Drawing.Image)
+        Me.btnKeluar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnKeluar.Location = New System.Drawing.Point(579, 169)
         Me.btnKeluar.Name = "btnKeluar"
-        Me.btnKeluar.Size = New System.Drawing.Size(80, 28)
+        Me.btnKeluar.Size = New System.Drawing.Size(75, 33)
         Me.btnKeluar.TabIndex = 44
         Me.btnKeluar.Text = "&Keluar"
+        Me.btnKeluar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnKeluar.UseVisualStyleBackColor = True
         '
         'btnHapus
         '
-        Me.btnHapus.Location = New System.Drawing.Point(377, 169)
+        Me.btnHapus.Font = New System.Drawing.Font("Leelawadee UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnHapus.Image = CType(resources.GetObject("btnHapus.Image"), System.Drawing.Image)
+        Me.btnHapus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnHapus.Location = New System.Drawing.Point(349, 169)
         Me.btnHapus.Name = "btnHapus"
-        Me.btnHapus.Size = New System.Drawing.Size(80, 28)
+        Me.btnHapus.Size = New System.Drawing.Size(75, 33)
         Me.btnHapus.TabIndex = 43
         Me.btnHapus.Text = "&Hapus"
+        Me.btnHapus.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnHapus.UseVisualStyleBackColor = True
         '
         'btnTambah
         '
-        Me.btnTambah.Location = New System.Drawing.Point(119, 169)
+        Me.btnTambah.Font = New System.Drawing.Font("Leelawadee UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnTambah.Image = CType(resources.GetObject("btnTambah.Image"), System.Drawing.Image)
+        Me.btnTambah.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnTambah.Location = New System.Drawing.Point(103, 169)
         Me.btnTambah.Name = "btnTambah"
-        Me.btnTambah.Size = New System.Drawing.Size(80, 28)
+        Me.btnTambah.Size = New System.Drawing.Size(80, 33)
         Me.btnTambah.TabIndex = 40
         Me.btnTambah.Text = "&Tambah"
+        Me.btnTambah.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnTambah.UseVisualStyleBackColor = True
         '
         'btnSimpan
         '
         Me.btnSimpan.BackColor = System.Drawing.Color.Transparent
+        Me.btnSimpan.Font = New System.Drawing.Font("Leelawadee UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSimpan.Image = CType(resources.GetObject("btnSimpan.Image"), System.Drawing.Image)
         Me.btnSimpan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSimpan.Location = New System.Drawing.Point(205, 169)
+        Me.btnSimpan.Location = New System.Drawing.Point(189, 169)
         Me.btnSimpan.Name = "btnSimpan"
-        Me.btnSimpan.Size = New System.Drawing.Size(80, 28)
+        Me.btnSimpan.Size = New System.Drawing.Size(80, 33)
         Me.btnSimpan.TabIndex = 41
         Me.btnSimpan.Text = "&Simpan"
+        Me.btnSimpan.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnSimpan.UseVisualStyleBackColor = False
         '
         'btnEdit
         '
-        Me.btnEdit.Location = New System.Drawing.Point(291, 169)
+        Me.btnEdit.Font = New System.Drawing.Font("Leelawadee UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEdit.Image = CType(resources.GetObject("btnEdit.Image"), System.Drawing.Image)
+        Me.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnEdit.Location = New System.Drawing.Point(275, 169)
         Me.btnEdit.Name = "btnEdit"
-        Me.btnEdit.Size = New System.Drawing.Size(80, 28)
+        Me.btnEdit.Size = New System.Drawing.Size(68, 33)
         Me.btnEdit.TabIndex = 42
         Me.btnEdit.Text = "&Edit"
+        Me.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnEdit.UseVisualStyleBackColor = True
         '
         'GroupBox1
@@ -180,24 +200,28 @@ Partial Class FormSupplier
         Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Top
         Me.GroupBox1.Location = New System.Drawing.Point(0, 0)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(731, 148)
+        Me.GroupBox1.Size = New System.Drawing.Size(727, 148)
         Me.GroupBox1.TabIndex = 45
         Me.GroupBox1.TabStop = False
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(463, 169)
+        Me.Button1.Font = New System.Drawing.Font("Leelawadee UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.Location = New System.Drawing.Point(430, 169)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(80, 28)
+        Me.Button1.Size = New System.Drawing.Size(75, 33)
         Me.Button1.TabIndex = 62
         Me.Button1.Text = "&Cetak"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Button1.UseVisualStyleBackColor = True
         '
         'FormSupplier
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(731, 454)
+        Me.ClientSize = New System.Drawing.Size(727, 480)
         Me.ControlBox = False
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox1)

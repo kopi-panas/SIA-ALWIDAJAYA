@@ -199,27 +199,6 @@ Public Class FormJurnalUmum
         End Try
     End Sub
 
-    'Private Sub EditJurnalGrid()
-    '    With objJurnal
-    '        Try
-    '            .EditDataHJurnal() 'edit hJurnal
-
-    '            If txtDebet.Text > 0 Then
-    '                mDK = "D"
-    '            Else
-    '                mDK = "K"
-    '            End If
-    '            .EditData() 'edit dJurnal
-    '            IsiListGridDJurnal()
-    '            BersihkanIsianGrid()
-    '            txtNoAkun.Enabled = True
-    '            lblNoTransaksi.Enabled = True
-    '            TotalDebetKredit()
-    '        Catch ex As Exception
-    '        End Try
-    '    End With
-    'End Sub
-
     Private Sub CariPeriode()
         Try
             Query = "SELECT tbl_periode.Periode FROM(tbl_periode)WHERE(((tbl_periode.Keterangan) = '" & "UnPosted" & "')) ORDER BY tbl_periode.Periode"
@@ -334,88 +313,6 @@ Public Class FormJurnalUmum
         End Try
     End Sub
 
-    Private Sub txtKredit_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtKredit.KeyPress
-        With objJurnal
-            'Try
-            If e.KeyChar = Chr(13) Then
-                If txtNoAkun.Text = "" Then
-                    MessageBox.Show("No. Akun masih kosong", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-                    txtNoAkun.Focus()
-                Else
-                    If txtDebet.Text = "" Then
-                        txtDebet.Text = 0
-                    Else
-                        txtDebet.Text = txtDebet.Text
-                    End If
-
-                    If txtKredit.Text = "" Then
-                        txtKredit.Text = 0
-                    Else
-                        txtKredit.Text = txtKredit.Text
-                    End If
-                    If txtDebet.Text > 0 Then
-                        mDK = "D"
-                    Else
-                        mDK = "K"
-                    End If
-                    PeriksaDataNoTransaksi()
-                    '.SimpanData() 'dJurnal
-                    mPosted = "UnPosted"
-                    BersihkanIsianGrid()
-                    txtNoAkun.Focus()
-                    'EditJurnalGrid()
-                End If
-                '        Catch ex As Exception
-                'End Try
-            Else
-                If mPosted = "UnPosted" Then
-                    'Try
-                    If txtNoAkun.Text = "" Then
-                        MessageBox.Show("No. Akun masih kosong", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-                        txtNoAkun.Focus()
-                    Else
-                        If txtDebet.Text > 0 Then
-                            mDK = "D"
-                        Else
-                            mDK = "K"
-                        End If
-
-                        If txtDebet.Text = "" Then
-                            txtDebet.Text = 0
-                        Else
-                            txtDebet.Text = txtDebet.Text
-                        End If
-
-                        If txtKredit.Text = "" Then
-                            txtKredit.Text = 0
-                        Else
-                            txtKredit.Text = txtKredit.Text
-                        End If
-
-                        .SimpanData() 'dJurnal
-                        mPosted = "UnPosted"
-
-                        BersihkanIsianGrid()
-                        txtNoAkun.Focus()
-                        'EditJurnalGrid()
-                    End If
-                End If
-                'Catch ex As Exception
-                MsgBox("Silahkan tekan tombol tambah data", MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, "Pesan kesalahan")
-                BersihkanIsianGrid()
-                'End Try
-                'Else
-                'MsgBox("Data ini sudah diposting, tidak bisa edit / tambah data", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Pesan Edit Data")
-                'txtNoAkun.Focus()
-                'BersihkanIsianGrid()
-            End If
-        End With
-
-        If Not ((e.KeyChar >= "0" And e.KeyChar <= "9") Or e.KeyChar = vbBack Or e.KeyChar = ".") Then
-            e.Handled = True
-        End If
-    End Sub
-
     Private Sub txtNoAkun_DoubleClick(sender As Object, e As EventArgs) Handles txtNoAkun.DoubleClick
         If txtKeterangan.Text = "" Then
             MsgBox("Keterangan masih kosong, silahkan isi", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Pesan")
@@ -500,21 +397,6 @@ Public Class FormJurnalUmum
     '        End Try
     '    End Sub
 
-    Private Sub txtNoAkun_KeyUp(sender As Object, e As KeyEventArgs) Handles txtNoAkun.KeyUp
-        If e.KeyCode = Keys.F1 Then
-            If txtKeterangan.Text = "" Then
-                MsgBox("Keterangan masih kosong, silahkan isi", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Pesan")
-                txtKeterangan.Focus()
-            Else
-                FormSubAkunJurnalUmum.ShowDialog()
-            End If
-        End If
-
-        If e.KeyCode = Keys.Escape Then
-            BersihkanIsianGrid()
-        End If
-    End Sub
-
     Private Sub btnHapus_Click(sender As Object, e As EventArgs) Handles btnHapus.Click
         Dim A As String
 
@@ -586,29 +468,7 @@ Public Class FormJurnalUmum
     End Sub
 
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
-        'If lblDebet.Text <> lblKredit.Text Then
-        '    MsgBox("Jumlah debet dan kredit tidak seimbang, silahkan periksa", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Pesan")
-        '    txtNoAkun.Enabled = True
-        '    txtNoAkun.Focus()
-        'Else
         FormSubJurnalUmum.ShowDialog()
-        'btnBatal.Text = "&Edit"
-        'txtKeterangan.Focus()
-        'BersihkanIsianGrid()
-        'btnSimpan.Enabled = False
-        'End If
-    End Sub
-
-    Private Sub txtKredit_KeyUp(sender As Object, e As KeyEventArgs) Handles txtKredit.KeyUp
-        If e.KeyCode = Keys.Escape Then
-            BersihkanIsianGrid()
-        End If
-    End Sub
-
-    Private Sub txtDebet_KeyUp(sender As Object, e As KeyEventArgs) Handles txtDebet.KeyUp
-        If e.KeyCode = Keys.Escape Then
-            BersihkanIsianGrid()
-        End If
     End Sub
 
     Private Sub btnBatal_Click(sender As Object, e As EventArgs) Handles btnBatal.Click
