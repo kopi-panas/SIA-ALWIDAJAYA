@@ -217,4 +217,7 @@ Public Class FormMasterBarang
         End Try
     End Sub
 
+    Private Sub btnCetak_Click(sender As Object, e As EventArgs) Handles btnCetak.Click
+        ReportBarang.Show()
+    End Sub
 End Class

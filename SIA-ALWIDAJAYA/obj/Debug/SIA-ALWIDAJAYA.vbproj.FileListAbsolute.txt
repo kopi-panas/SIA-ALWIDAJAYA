@@ -269,3 +269,7 @@ F:\Git\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA_ALWIDAJAYA.FormSubJurnalUmum.
 F:\Git\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA_ALWIDAJAYA.FormSupplier.resources
 F:\Git\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA_ALWIDAJAYA.Resources.resources
 F:\Git\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA-ALWIDAJAYA.vbproj.GenerateResource.Cache
+E:\Git\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\bin\Debug\db_akuntansi.accdb
+E:\Git\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA_ALWIDAJAYA.ReportBarang.resources
+E:\Git\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\RdlCompile.cache
+E:\Git\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\RdlCompile.compiled
