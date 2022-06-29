@@ -78,6 +78,7 @@
     <Compile Include="ClassAktivaTetap.vb" />
     <Compile Include="ClassJurnalUmum.vb" />
     <Compile Include="ClassPosting.vb" />
+    <Compile Include="ClassSaldoblnlalu.vb" />
     <Compile Include="FormAktivaTetap.Designer.vb">
       <DependentUpon>FormAktivaTetap.vb</DependentUpon>
     </Compile>

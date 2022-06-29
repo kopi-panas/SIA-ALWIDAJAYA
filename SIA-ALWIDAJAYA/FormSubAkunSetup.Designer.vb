@@ -22,6 +22,7 @@ Partial Class FormSubAkunSetup
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormSubAkunSetup))
         Me.btnYa = New System.Windows.Forms.Button()
         Me.btnTidak = New System.Windows.Forms.Button()
         Me.ListView1 = New System.Windows.Forms.ListView()
@@ -29,20 +30,28 @@ Partial Class FormSubAkunSetup
         '
         'btnYa
         '
-        Me.btnYa.Location = New System.Drawing.Point(114, 342)
+        Me.btnYa.Font = New System.Drawing.Font("Microsoft Tai Le", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnYa.Image = CType(resources.GetObject("btnYa.Image"), System.Drawing.Image)
+        Me.btnYa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnYa.Location = New System.Drawing.Point(128, 355)
         Me.btnYa.Name = "btnYa"
-        Me.btnYa.Size = New System.Drawing.Size(80, 28)
+        Me.btnYa.Size = New System.Drawing.Size(59, 34)
         Me.btnYa.TabIndex = 17
         Me.btnYa.Text = "&Ya"
+        Me.btnYa.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnYa.UseVisualStyleBackColor = True
         '
         'btnTidak
         '
-        Me.btnTidak.Location = New System.Drawing.Point(200, 342)
+        Me.btnTidak.Font = New System.Drawing.Font("Microsoft Tai Le", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnTidak.Image = CType(resources.GetObject("btnTidak.Image"), System.Drawing.Image)
+        Me.btnTidak.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnTidak.Location = New System.Drawing.Point(193, 355)
         Me.btnTidak.Name = "btnTidak"
-        Me.btnTidak.Size = New System.Drawing.Size(80, 28)
+        Me.btnTidak.Size = New System.Drawing.Size(70, 34)
         Me.btnTidak.TabIndex = 18
         Me.btnTidak.Text = "&Tidak"
+        Me.btnTidak.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnTidak.UseVisualStyleBackColor = True
         '
         'ListView1
@@ -61,7 +70,7 @@ Partial Class FormSubAkunSetup
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(393, 378)
+        Me.ClientSize = New System.Drawing.Size(389, 401)
         Me.ControlBox = False
         Me.Controls.Add(Me.btnYa)
         Me.Controls.Add(Me.btnTidak)
