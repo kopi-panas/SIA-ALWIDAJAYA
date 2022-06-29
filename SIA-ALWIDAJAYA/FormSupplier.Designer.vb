@@ -221,11 +221,7 @@ Partial Class FormSupplier
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-<<<<<<< HEAD
         Me.ClientSize = New System.Drawing.Size(727, 480)
-=======
-        Me.ClientSize = New System.Drawing.Size(727, 450)
->>>>>>> 11981e4e17a4f498b2a16159c6968a82e949eafc
         Me.ControlBox = False
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox1)
