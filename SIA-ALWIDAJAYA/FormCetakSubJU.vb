@@ -14,10 +14,12 @@ Public Class FormCetakSubJU
     End Sub
 
     Private Sub btnBB_Click(sender As Object, e As EventArgs) Handles btnBB.Click
-        bukubesar.Show()
+        jurnalumum.Hide()
+        'neracasaldo.Hide()
     End Sub
 
     Private Sub btnNS_Click(sender As Object, e As EventArgs) Handles btnNS.Click
-        neracasaldo.Show()
+        bukubesar.Hide()
+        'jurnalumum.Hide()
     End Sub
 End Class

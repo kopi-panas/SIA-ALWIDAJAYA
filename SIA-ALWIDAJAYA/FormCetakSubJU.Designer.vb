@@ -29,23 +29,23 @@ Partial Class FormCetakSubJU
         Me.btnJU = New System.Windows.Forms.Button()
         Me.btnKeluar = New System.Windows.Forms.Button()
         Me.jurnalumum = New System.Windows.Forms.Panel()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.btnCetakJU = New System.Windows.Forms.Button()
         Me.Group = New System.Windows.Forms.GroupBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.cbPeriodeJU = New System.Windows.Forms.ComboBox()
         Me.bukubesar = New System.Windows.Forms.Panel()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.btnCetakBB = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cbPeriodeBB = New System.Windows.Forms.ComboBox()
         Me.neracasaldo = New System.Windows.Forms.Panel()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.btnCetakNS = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.cbPeriodeNS = New System.Windows.Forms.ComboBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.jurnalumum.SuspendLayout()
         Me.Group.SuspendLayout()
@@ -64,7 +64,7 @@ Partial Class FormCetakSubJU
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(142, 205)
+        Me.Panel1.Size = New System.Drawing.Size(142, 201)
         Me.Panel1.TabIndex = 0
         '
         'btnNS
@@ -127,8 +127,18 @@ Partial Class FormCetakSubJU
         Me.jurnalumum.Dock = System.Windows.Forms.DockStyle.Fill
         Me.jurnalumum.Location = New System.Drawing.Point(142, 0)
         Me.jurnalumum.Name = "jurnalumum"
-        Me.jurnalumum.Size = New System.Drawing.Size(288, 205)
+        Me.jurnalumum.Size = New System.Drawing.Size(284, 201)
         Me.jurnalumum.TabIndex = 1
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(85, 27)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(116, 13)
+        Me.Label3.TabIndex = 63
+        Me.Label3.Text = "Cetak Jurnal Umum"
         '
         'btnCetakJU
         '
@@ -182,8 +192,18 @@ Partial Class FormCetakSubJU
         Me.bukubesar.Dock = System.Windows.Forms.DockStyle.Fill
         Me.bukubesar.Location = New System.Drawing.Point(142, 0)
         Me.bukubesar.Name = "bukubesar"
-        Me.bukubesar.Size = New System.Drawing.Size(288, 205)
+        Me.bukubesar.Size = New System.Drawing.Size(284, 201)
         Me.bukubesar.TabIndex = 122
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(92, 27)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(109, 13)
+        Me.Label4.TabIndex = 124
+        Me.Label4.Text = "Cetak Buku Besar"
         '
         'btnCetakBB
         '
@@ -237,8 +257,18 @@ Partial Class FormCetakSubJU
         Me.neracasaldo.Dock = System.Windows.Forms.DockStyle.Fill
         Me.neracasaldo.Location = New System.Drawing.Point(142, 0)
         Me.neracasaldo.Name = "neracasaldo"
-        Me.neracasaldo.Size = New System.Drawing.Size(288, 205)
+        Me.neracasaldo.Size = New System.Drawing.Size(284, 201)
         Me.neracasaldo.TabIndex = 125
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(85, 27)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(121, 13)
+        Me.Label5.TabIndex = 124
+        Me.Label5.Text = "Cetak Neraca Saldo"
         '
         'btnCetakNS
         '
@@ -284,45 +314,15 @@ Partial Class FormCetakSubJU
         Me.cbPeriodeNS.Size = New System.Drawing.Size(160, 21)
         Me.cbPeriodeNS.TabIndex = 61
         '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(85, 27)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(116, 13)
-        Me.Label3.TabIndex = 63
-        Me.Label3.Text = "Cetak Jurnal Umum"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(92, 27)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(109, 13)
-        Me.Label4.TabIndex = 124
-        Me.Label4.Text = "Cetak Buku Besar"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(85, 27)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(121, 13)
-        Me.Label5.TabIndex = 124
-        Me.Label5.Text = "Cetak Neraca Saldo"
-        '
         'FormCetakSubJU
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(430, 205)
+        Me.ClientSize = New System.Drawing.Size(426, 201)
         Me.ControlBox = False
         Me.Controls.Add(Me.jurnalumum)
-        Me.Controls.Add(Me.neracasaldo)
         Me.Controls.Add(Me.bukubesar)
+        Me.Controls.Add(Me.neracasaldo)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
