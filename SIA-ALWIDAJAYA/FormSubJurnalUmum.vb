@@ -58,9 +58,8 @@ Public Class FormSubJurnalUmum
     Private Sub btnYa_Click(sender As Object, e As EventArgs) Handles btnYa.Click
         Me.Close()
         FormJurnalUmum.IsiListGridDJurnal()
-        FormJurnalUmum.RumusSubDebet()
-        FormJurnalUmum.RumusSubKredit()
-
+        'FormJurnalUmum.RumusSubDebet()
+        'FormJurnalUmum.RumusSubKredit()
     End Sub
 
     Private Sub txtNoTransaksi_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNoTransaksi.KeyPress

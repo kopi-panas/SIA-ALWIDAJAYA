@@ -10,18 +10,9 @@ Public Class ClassAJP
     Private mDebet As Long
     Private mKredit As Long
 
-    Public Sub TambahData()
-        With FormAJP
-            .BersihkanIsian()
-            .BersihkanIsianGrid()
-            .IsiListGridDJurnal()
-            .txtTgl.Focus()
-        End With
-    End Sub
-
     Public Function SimpanDataHJurnal()
         Try
-            mNoTransaksi = FormAJP.txtNoTransaksi.Text
+            mNoTransaksi = FormAJP.lblNoTransaksi.Text
             mPeriode = FormAJP.lblPeriode.Text
             mTglTransaksi = FormAJP.txtTgl.Value
             mKeterangan = FormAJP.txtKeterangan.Text
@@ -38,7 +29,7 @@ Public Class ClassAJP
 
     Public Function SimpanData()
         Try
-            mNoTransaksi = FormAJP.txtNoTransaksi.Text
+            mNoTransaksi = FormAJP.lblNoTransaksi.Text
             mNoAkun = FormAJP.txtNoAkun.Text
             DK = FormAJP.mDK
             mDebet = FormAJP.txtDebet.Text
@@ -59,7 +50,7 @@ Public Class ClassAJP
 
     Public Function EditDataHJurnal()
         Try
-            mNoTransaksi = FormAJP.txtNoTransaksi.Text
+            mNoTransaksi = FormAJP.lblNoTransaksi.Text
             mTglTransaksi = Format(FormAJP.txtTgl.Value, "dd/MM/yyyy")
             mKeterangan = FormAJP.txtKeterangan.Text
 
@@ -78,7 +69,7 @@ Public Class ClassAJP
             DK = FormAJP.mDK
             mDebet = FormAJP.txtDebet.Text
             mKredit = FormAJP.txtKredit.Text
-            mNoTransaksi = FormAJP.txtNoTransaksi.Text
+            mNoTransaksi = FormAJP.lblNoTransaksi.Text
             mNoAkun = FormAJP.txtNoAkun.Text
 
             Query = "UPDATE tbl_detailajp SET  DK = '" & DK & "', Debet = '" & mDebet & "', Kredit = '" & mKredit & "' WHERE NoTransaksi = '" & mNoTransaksi & "' AND NoAkun = '" & mNoAkun & "'"
@@ -93,7 +84,7 @@ Public Class ClassAJP
 
     Public Function HapusDataHJurnal()
         Try
-            mNoTransaksi = FormAJP.txtNoTransaksi.Text
+            mNoTransaksi = FormAJP.lblNoTransaksi.Text
             Query = "DELETE FROM tbl_jurnalajp WHERE NoTransaksi = '" & mNoTransaksi & "'"
             Da = New OleDbDataAdapter(Query, CONN)
             Ds = New DataSet
@@ -106,7 +97,7 @@ Public Class ClassAJP
 
     Public Function HapusData()
         Try
-            mNoTransaksi = FormAJP.txtNoTransaksi.Text
+            mNoTransaksi = FormAJP.lblNoTransaksi.Text
             Query = "DELETE FROM tbl_detailajp WHERE NoTransaksi = '" & mNoTransaksi & "'"
             Da = New OleDbDataAdapter(Query, CONN)
             Ds = New DataSet

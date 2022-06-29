@@ -22,46 +22,18 @@ Partial Class FormSubAJP
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.btnYa = New System.Windows.Forms.Button()
-        Me.btnKeluar = New System.Windows.Forms.Button()
-        Me.ListView1 = New System.Windows.Forms.ListView()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormSubAJP))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.txtNoTransaksi = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.cbPeriode = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.btnYa = New System.Windows.Forms.Button()
+        Me.btnKeluar = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'btnYa
-        '
-        Me.btnYa.Location = New System.Drawing.Point(279, 412)
-        Me.btnYa.Name = "btnYa"
-        Me.btnYa.Size = New System.Drawing.Size(80, 28)
-        Me.btnYa.TabIndex = 20
-        Me.btnYa.Text = "&Ya"
-        Me.btnYa.UseVisualStyleBackColor = True
-        '
-        'btnKeluar
-        '
-        Me.btnKeluar.Location = New System.Drawing.Point(365, 412)
-        Me.btnKeluar.Name = "btnKeluar"
-        Me.btnKeluar.Size = New System.Drawing.Size(80, 28)
-        Me.btnKeluar.TabIndex = 21
-        Me.btnKeluar.Text = "&Keluar"
-        Me.btnKeluar.UseVisualStyleBackColor = True
-        '
-        'ListView1
-        '
-        Me.ListView1.FullRowSelect = True
-        Me.ListView1.GridLines = True
-        Me.ListView1.Location = New System.Drawing.Point(8, 121)
-        Me.ListView1.MultiSelect = False
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(720, 285)
-        Me.ListView1.TabIndex = 19
-        Me.ListView1.UseCompatibleStateImageBehavior = False
-        Me.ListView1.View = System.Windows.Forms.View.Details
         '
         'GroupBox1
         '
@@ -69,9 +41,10 @@ Partial Class FormSubAJP
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.cbPeriode)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(8, 12)
+        Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.GroupBox1.Location = New System.Drawing.Point(0, 0)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(719, 103)
+        Me.GroupBox1.Size = New System.Drawing.Size(747, 113)
         Me.GroupBox1.TabIndex = 18
         Me.GroupBox1.TabStop = False
         '
@@ -110,14 +83,51 @@ Partial Class FormSubAJP
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "Periode:"
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(34, 140)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowHeadersVisible = False
+        Me.DataGridView1.Size = New System.Drawing.Size(684, 260)
+        Me.DataGridView1.TabIndex = 32
+        '
+        'btnYa
+        '
+        Me.btnYa.Font = New System.Drawing.Font("Microsoft Tai Le", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnYa.Image = CType(resources.GetObject("btnYa.Image"), System.Drawing.Image)
+        Me.btnYa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnYa.Location = New System.Drawing.Point(299, 420)
+        Me.btnYa.Name = "btnYa"
+        Me.btnYa.Size = New System.Drawing.Size(59, 29)
+        Me.btnYa.TabIndex = 30
+        Me.btnYa.Text = "&Ya"
+        Me.btnYa.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnYa.UseVisualStyleBackColor = True
+        '
+        'btnKeluar
+        '
+        Me.btnKeluar.Font = New System.Drawing.Font("Microsoft Tai Le", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnKeluar.Image = CType(resources.GetObject("btnKeluar.Image"), System.Drawing.Image)
+        Me.btnKeluar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnKeluar.Location = New System.Drawing.Point(364, 420)
+        Me.btnKeluar.Name = "btnKeluar"
+        Me.btnKeluar.Size = New System.Drawing.Size(80, 29)
+        Me.btnKeluar.TabIndex = 31
+        Me.btnKeluar.Text = "&Keluar"
+        Me.btnKeluar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnKeluar.UseVisualStyleBackColor = True
+        '
         'FormSubAJP
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(739, 462)
+        Me.ClientSize = New System.Drawing.Size(747, 460)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.btnYa)
         Me.Controls.Add(Me.btnKeluar)
-        Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
@@ -129,15 +139,16 @@ Partial Class FormSubAJP
         Me.Text = "Data Transaksi"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents btnYa As System.Windows.Forms.Button
-    Friend WithEvents btnKeluar As System.Windows.Forms.Button
-    Friend WithEvents ListView1 As System.Windows.Forms.ListView
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents txtNoTransaksi As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents cbPeriode As System.Windows.Forms.ComboBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents btnYa As System.Windows.Forms.Button
+    Friend WithEvents btnKeluar As System.Windows.Forms.Button
 End Class

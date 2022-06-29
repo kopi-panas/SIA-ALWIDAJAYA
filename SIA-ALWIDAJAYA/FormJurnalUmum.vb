@@ -100,11 +100,26 @@ Public Class FormJurnalUmum
 
     Public Sub IsiListGridDJurnal()
         Try
+            BukaKoneksi()
+            'Query = "SELECT tbl_detailjurnal.NoTransaksi, tbl_detailjurnal.NoAkun, tbl_coa.NamaAkun, tbl_detailjurnal.DK, tbl_detailjurnal.Debet, tbl_detailjurnal.Kredit FROM (tbl_detailjurnal LEFT JOIN tbl_jurnalumum ON tbl_detailjurnal.NoTransaksi = tbl_detailjurnal.NoTransaksi) LEFT JOIN tbl_coa ON tbl_detailjurnal.NoAkun = tbl_coa.NoAkun WHERE(((tbl_detailjurnal.NoTransaksi) = '" & lblNoTransaksi.Text & "'))"
+            'Command = New OleDbCommand(Query, CONN)
+            'Ds = New DataSet
+            'Da.Fill(Ds)
+            'Rd = Command.ExecuteReader
+            'Rd.Read()
+            'Do While Rd.Read
+            '    DataGridView1.Columns.Add(Rd.Item(0))
+            'Loop
             Query = "SELECT tbl_detailjurnal.NoTransaksi, tbl_detailjurnal.NoAkun, tbl_coa.NamaAkun, tbl_detailjurnal.DK, tbl_detailjurnal.Debet, tbl_detailjurnal.Kredit FROM (tbl_detailjurnal LEFT JOIN tbl_jurnalumum ON tbl_detailjurnal.NoTransaksi = tbl_detailjurnal.NoTransaksi) LEFT JOIN tbl_coa ON tbl_detailjurnal.NoAkun = tbl_coa.NoAkun WHERE(((tbl_detailjurnal.NoTransaksi) = '" & lblNoTransaksi.Text & "'))"
             Da = New OleDbDataAdapter(Query, CONN)
             Ds = New DataSet
             Da.Fill(Ds)
-            DataGridView1.DataSource = (Ds.Tables("tbl_detailjurnal"))
+            DataGridView1.Columns.Clear()
+            For b = 0 To Ds.Tables(0).Rows.Count - 1
+                With DataGridView1
+                    .Columns.Add(Ds.Tables(0).Rows(b).Item(0))
+                End With
+            Next
         Catch ex As Exception
         End Try
     End Sub
@@ -130,6 +145,7 @@ Public Class FormJurnalUmum
             If Ds.Tables(0).Rows.Count - 1 Then
                 BersihkanIsian()
                 txtTgl.Focus()
+                IsiListGridDJurnal()
             Else
                 lblPeriode.Text = Ds.Tables(0).Rows(0).Item(0)
                 txtTgl.Text = Ds.Tables(0).Rows(0).Item(1)
@@ -137,6 +153,9 @@ Public Class FormJurnalUmum
                 txtKeterangan.Text = Ds.Tables(0).Rows(0).Item(3)
                 mPosted = Ds.Tables(0).Rows(0).Item(4)
 
+                IsiListGridDJurnal()
+                RumusSubDebet()
+                RumusSubKredit()
             End If
         Catch ex As Exception
         End Try
@@ -173,8 +192,7 @@ Public Class FormJurnalUmum
                 BersihkanIsian()
                 BersihkanIsianGrid()
                 NoTransaksi()
-                btnBatal.Text = "&Edit"
-                btnTambah.Text = "&Tambah"
+                IsiListGridDJurnal()
             End If
         Catch ex As Exception
         End Try
@@ -475,23 +493,23 @@ Public Class FormJurnalUmum
         KondisiAwal()
     End Sub
 
-    Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
-        Try
-            Dim i As Integer
-            i = DataGridView1.CurrentRow.Index
+    'Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
+    '    Try
+    '        Dim i As Integer
+    '        i = DataGridView1.CurrentRow.Index
 
-            txtNoAkun.Text = DataGridView1.Item(0, i).Value
-            lblNamaAkun.Text = DataGridView1.Item(1, i).Value
-            txtDebet.Text = DataGridView1.Item(2, i).Value
-            txtKredit.Text = DataGridView1.Item(3, i).Value
-            btnTambah.Enabled = False
-            btnSimpan.Enabled = False
-            btnBatal.Enabled = True
-            btnHapus.Enabled = True
-            btnKeluar.Enabled = True
-        Catch ex As Exception
-            MsgBox("Tidak ada data yang dipilih!", MsgBoxStyle.Information, "")
-        End Try
-    End Sub
+    '        txtNoAkun.Text = DataGridView1.Item(0, i).Value
+    '        lblNamaAkun.Text = DataGridView1.Item(1, i).Value
+    '        txtDebet.Text = DataGridView1.Item(2, i).Value
+    '        txtKredit.Text = DataGridView1.Item(3, i).Value
+    '        btnTambah.Enabled = False
+    '        btnSimpan.Enabled = False
+    '        btnBatal.Enabled = True
+    '        btnHapus.Enabled = True
+    '        btnKeluar.Enabled = True
+    '    Catch ex As Exception
+    '        MsgBox("Tidak ada data yang dipilih!", MsgBoxStyle.Information, "")
+    '    End Try
+    'End Sub
 
 End Class

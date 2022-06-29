@@ -22,136 +22,43 @@ Partial Class FormAJP
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.ListView1 = New System.Windows.Forms.ListView()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormAJP))
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.lblNoTransaksi = New System.Windows.Forms.Label()
+        Me.btnSearch = New System.Windows.Forms.Button()
+        Me.lblPeriode = New System.Windows.Forms.Label()
+        Me.txtTgl = New System.Windows.Forms.DateTimePicker()
+        Me.txtKeterangan = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.lblKredit = New System.Windows.Forms.Label()
+        Me.lblDebet = New System.Windows.Forms.Label()
         Me.btnPreview = New System.Windows.Forms.Button()
         Me.btnKeluar = New System.Windows.Forms.Button()
         Me.btnHapus = New System.Windows.Forms.Button()
         Me.btnTambah = New System.Windows.Forms.Button()
         Me.btnSimpan = New System.Windows.Forms.Button()
-        Me.btnEdit = New System.Windows.Forms.Button()
+        Me.btnBatal = New System.Windows.Forms.Button()
         Me.txtKredit = New System.Windows.Forms.TextBox()
         Me.txtDebet = New System.Windows.Forms.TextBox()
         Me.lblNamaAkun = New System.Windows.Forms.Label()
         Me.txtNoAkun = New System.Windows.Forms.TextBox()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.btnSearch = New System.Windows.Forms.Button()
-        Me.lblPeriode = New System.Windows.Forms.Label()
-        Me.txtTgl = New System.Windows.Forms.DateTimePicker()
-        Me.txtKeterangan = New System.Windows.Forms.TextBox()
-        Me.txtNoTransaksi = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.lblKredit = New System.Windows.Forms.Label()
-        Me.lblDebet = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'ListView1
-        '
-        Me.ListView1.FullRowSelect = True
-        Me.ListView1.GridLines = True
-        Me.ListView1.Location = New System.Drawing.Point(40, 189)
-        Me.ListView1.MultiSelect = False
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(716, 252)
-        Me.ListView1.TabIndex = 36
-        Me.ListView1.UseCompatibleStateImageBehavior = False
-        Me.ListView1.View = System.Windows.Forms.View.Details
-        '
-        'btnPreview
-        '
-        Me.btnPreview.Location = New System.Drawing.Point(298, 493)
-        Me.btnPreview.Name = "btnPreview"
-        Me.btnPreview.Size = New System.Drawing.Size(80, 28)
-        Me.btnPreview.TabIndex = 35
-        Me.btnPreview.Text = "&Preview"
-        Me.btnPreview.UseVisualStyleBackColor = True
-        '
-        'btnKeluar
-        '
-        Me.btnKeluar.Location = New System.Drawing.Point(384, 493)
-        Me.btnKeluar.Name = "btnKeluar"
-        Me.btnKeluar.Size = New System.Drawing.Size(80, 28)
-        Me.btnKeluar.TabIndex = 34
-        Me.btnKeluar.Text = "&Keluar"
-        Me.btnKeluar.UseVisualStyleBackColor = True
-        '
-        'btnHapus
-        '
-        Me.btnHapus.Location = New System.Drawing.Point(212, 493)
-        Me.btnHapus.Name = "btnHapus"
-        Me.btnHapus.Size = New System.Drawing.Size(80, 28)
-        Me.btnHapus.TabIndex = 33
-        Me.btnHapus.Text = "&Hapus"
-        Me.btnHapus.UseVisualStyleBackColor = True
-        '
-        'btnTambah
-        '
-        Me.btnTambah.Location = New System.Drawing.Point(676, 158)
-        Me.btnTambah.Name = "btnTambah"
-        Me.btnTambah.Size = New System.Drawing.Size(80, 28)
-        Me.btnTambah.TabIndex = 30
-        Me.btnTambah.Text = "&Tambah"
-        Me.btnTambah.UseVisualStyleBackColor = True
-        '
-        'btnSimpan
-        '
-        Me.btnSimpan.Location = New System.Drawing.Point(40, 493)
-        Me.btnSimpan.Name = "btnSimpan"
-        Me.btnSimpan.Size = New System.Drawing.Size(80, 28)
-        Me.btnSimpan.TabIndex = 31
-        Me.btnSimpan.Text = "&Simpan"
-        Me.btnSimpan.UseVisualStyleBackColor = True
-        '
-        'btnEdit
-        '
-        Me.btnEdit.Location = New System.Drawing.Point(126, 493)
-        Me.btnEdit.Name = "btnEdit"
-        Me.btnEdit.Size = New System.Drawing.Size(80, 28)
-        Me.btnEdit.TabIndex = 32
-        Me.btnEdit.Text = "&Edit"
-        Me.btnEdit.UseVisualStyleBackColor = True
-        '
-        'txtKredit
-        '
-        Me.txtKredit.Location = New System.Drawing.Point(556, 163)
-        Me.txtKredit.Name = "txtKredit"
-        Me.txtKredit.Size = New System.Drawing.Size(114, 20)
-        Me.txtKredit.TabIndex = 29
-        '
-        'txtDebet
-        '
-        Me.txtDebet.Location = New System.Drawing.Point(439, 163)
-        Me.txtDebet.Name = "txtDebet"
-        Me.txtDebet.Size = New System.Drawing.Size(116, 20)
-        Me.txtDebet.TabIndex = 28
-        '
-        'lblNamaAkun
-        '
-        Me.lblNamaAkun.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.lblNamaAkun.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblNamaAkun.Location = New System.Drawing.Point(126, 163)
-        Me.lblNamaAkun.Name = "lblNamaAkun"
-        Me.lblNamaAkun.Size = New System.Drawing.Size(307, 20)
-        Me.lblNamaAkun.TabIndex = 26
-        '
-        'txtNoAkun
-        '
-        Me.txtNoAkun.Location = New System.Drawing.Point(40, 163)
-        Me.txtNoAkun.Name = "txtNoAkun"
-        Me.txtNoAkun.Size = New System.Drawing.Size(88, 20)
-        Me.txtNoAkun.TabIndex = 27
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.lblNoTransaksi)
         Me.GroupBox1.Controls.Add(Me.btnSearch)
         Me.GroupBox1.Controls.Add(Me.lblPeriode)
         Me.GroupBox1.Controls.Add(Me.txtTgl)
         Me.GroupBox1.Controls.Add(Me.txtKeterangan)
-        Me.GroupBox1.Controls.Add(Me.txtNoTransaksi)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
@@ -159,26 +66,37 @@ Partial Class FormAJP
         Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Top
         Me.GroupBox1.Location = New System.Drawing.Point(0, 0)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(796, 137)
+        Me.GroupBox1.Size = New System.Drawing.Size(838, 137)
         Me.GroupBox1.TabIndex = 25
         Me.GroupBox1.TabStop = False
         '
+        'lblNoTransaksi
+        '
+        Me.lblNoTransaksi.BackColor = System.Drawing.SystemColors.InactiveCaption
+        Me.lblNoTransaksi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblNoTransaksi.Font = New System.Drawing.Font("Leelawadee UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNoTransaksi.Location = New System.Drawing.Point(149, 30)
+        Me.lblNoTransaksi.Name = "lblNoTransaksi"
+        Me.lblNoTransaksi.Size = New System.Drawing.Size(120, 20)
+        Me.lblNoTransaksi.TabIndex = 17
+        '
         'btnSearch
         '
-        Me.btnSearch.Location = New System.Drawing.Point(274, 31)
+        Me.btnSearch.Image = CType(resources.GetObject("btnSearch.Image"), System.Drawing.Image)
+        Me.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnSearch.Location = New System.Drawing.Point(274, 26)
         Me.btnSearch.Name = "btnSearch"
-        Me.btnSearch.Size = New System.Drawing.Size(24, 20)
-        Me.btnSearch.TabIndex = 15
-        Me.btnSearch.Text = "Button1"
+        Me.btnSearch.Size = New System.Drawing.Size(29, 28)
+        Me.btnSearch.TabIndex = 16
         Me.btnSearch.UseVisualStyleBackColor = True
         '
         'lblPeriode
         '
         Me.lblPeriode.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.lblPeriode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblPeriode.Location = New System.Drawing.Point(565, 32)
+        Me.lblPeriode.Location = New System.Drawing.Point(655, 31)
         Me.lblPeriode.Name = "lblPeriode"
-        Me.lblPeriode.Size = New System.Drawing.Size(96, 20)
+        Me.lblPeriode.Size = New System.Drawing.Size(87, 20)
         Me.lblPeriode.TabIndex = 14
         '
         'txtTgl
@@ -196,18 +114,11 @@ Partial Class FormAJP
         Me.txtKeterangan.Size = New System.Drawing.Size(544, 20)
         Me.txtKeterangan.TabIndex = 12
         '
-        'txtNoTransaksi
-        '
-        Me.txtNoTransaksi.Location = New System.Drawing.Point(149, 31)
-        Me.txtNoTransaksi.Name = "txtNoTransaksi"
-        Me.txtNoTransaksi.Size = New System.Drawing.Size(119, 20)
-        Me.txtNoTransaksi.TabIndex = 11
-        '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Arial Narrow", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(507, 32)
+        Me.Label4.Location = New System.Drawing.Point(597, 31)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(52, 16)
         Me.Label4.TabIndex = 10
@@ -243,50 +154,186 @@ Partial Class FormAJP
         Me.Label1.TabIndex = 7
         Me.Label1.Text = "No. Transaksi:"
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Arial Narrow", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(682, 427)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(73, 16)
+        Me.Label6.TabIndex = 44
+        Me.Label6.Text = "Total Kredit:"
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(73, 187)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowHeadersVisible = False
+        Me.DataGridView1.Size = New System.Drawing.Size(715, 237)
+        Me.DataGridView1.TabIndex = 43
+        '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Arial Narrow", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(502, 456)
+        Me.Label5.Location = New System.Drawing.Point(577, 427)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(34, 16)
-        Me.Label5.TabIndex = 37
-        Me.Label5.Text = "Total"
+        Me.Label5.Size = New System.Drawing.Size(72, 16)
+        Me.Label5.TabIndex = 32
+        Me.Label5.Text = "Total Debet:"
         '
         'lblKredit
         '
-        Me.lblKredit.BackColor = System.Drawing.Color.White
+        Me.lblKredit.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.lblKredit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblKredit.Location = New System.Drawing.Point(647, 448)
+        Me.lblKredit.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblKredit.Location = New System.Drawing.Point(685, 443)
         Me.lblKredit.Name = "lblKredit"
-        Me.lblKredit.Size = New System.Drawing.Size(106, 24)
-        Me.lblKredit.TabIndex = 39
+        Me.lblKredit.Size = New System.Drawing.Size(106, 22)
+        Me.lblKredit.TabIndex = 42
         '
         'lblDebet
         '
-        Me.lblDebet.BackColor = System.Drawing.Color.White
+        Me.lblDebet.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.lblDebet.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblDebet.Location = New System.Drawing.Point(542, 448)
+        Me.lblDebet.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDebet.Location = New System.Drawing.Point(580, 443)
         Me.lblDebet.Name = "lblDebet"
-        Me.lblDebet.Size = New System.Drawing.Size(106, 24)
-        Me.lblDebet.TabIndex = 38
+        Me.lblDebet.Size = New System.Drawing.Size(106, 22)
+        Me.lblDebet.TabIndex = 41
+        '
+        'btnPreview
+        '
+        Me.btnPreview.Font = New System.Drawing.Font("Microsoft Tai Le", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPreview.Image = CType(resources.GetObject("btnPreview.Image"), System.Drawing.Image)
+        Me.btnPreview.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnPreview.Location = New System.Drawing.Point(282, 490)
+        Me.btnPreview.Name = "btnPreview"
+        Me.btnPreview.Size = New System.Drawing.Size(80, 31)
+        Me.btnPreview.TabIndex = 40
+        Me.btnPreview.Text = "&Preview"
+        Me.btnPreview.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnPreview.UseVisualStyleBackColor = True
+        '
+        'btnKeluar
+        '
+        Me.btnKeluar.Font = New System.Drawing.Font("Microsoft Tai Le", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnKeluar.Image = CType(resources.GetObject("btnKeluar.Image"), System.Drawing.Image)
+        Me.btnKeluar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnKeluar.Location = New System.Drawing.Point(368, 490)
+        Me.btnKeluar.Name = "btnKeluar"
+        Me.btnKeluar.Size = New System.Drawing.Size(80, 31)
+        Me.btnKeluar.TabIndex = 39
+        Me.btnKeluar.Text = "&Keluar"
+        Me.btnKeluar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnKeluar.UseVisualStyleBackColor = True
+        '
+        'btnHapus
+        '
+        Me.btnHapus.Font = New System.Drawing.Font("Microsoft Tai Le", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnHapus.Image = CType(resources.GetObject("btnHapus.Image"), System.Drawing.Image)
+        Me.btnHapus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnHapus.Location = New System.Drawing.Point(196, 490)
+        Me.btnHapus.Name = "btnHapus"
+        Me.btnHapus.Size = New System.Drawing.Size(80, 31)
+        Me.btnHapus.TabIndex = 38
+        Me.btnHapus.Text = "&Hapus"
+        Me.btnHapus.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnHapus.UseVisualStyleBackColor = True
+        '
+        'btnTambah
+        '
+        Me.btnTambah.Font = New System.Drawing.Font("Microsoft Tai Le", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnTambah.Image = CType(resources.GetObject("btnTambah.Image"), System.Drawing.Image)
+        Me.btnTambah.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnTambah.Location = New System.Drawing.Point(709, 148)
+        Me.btnTambah.Name = "btnTambah"
+        Me.btnTambah.Size = New System.Drawing.Size(80, 33)
+        Me.btnTambah.TabIndex = 35
+        Me.btnTambah.Text = "&Tambah"
+        Me.btnTambah.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnTambah.UseVisualStyleBackColor = True
+        '
+        'btnSimpan
+        '
+        Me.btnSimpan.Font = New System.Drawing.Font("Microsoft Tai Le", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSimpan.Image = CType(resources.GetObject("btnSimpan.Image"), System.Drawing.Image)
+        Me.btnSimpan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnSimpan.Location = New System.Drawing.Point(24, 490)
+        Me.btnSimpan.Name = "btnSimpan"
+        Me.btnSimpan.Size = New System.Drawing.Size(80, 31)
+        Me.btnSimpan.TabIndex = 36
+        Me.btnSimpan.Text = "&Simpan"
+        Me.btnSimpan.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnSimpan.UseVisualStyleBackColor = True
+        '
+        'btnBatal
+        '
+        Me.btnBatal.Font = New System.Drawing.Font("Microsoft Tai Le", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBatal.Image = CType(resources.GetObject("btnBatal.Image"), System.Drawing.Image)
+        Me.btnBatal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnBatal.Location = New System.Drawing.Point(110, 490)
+        Me.btnBatal.Name = "btnBatal"
+        Me.btnBatal.Size = New System.Drawing.Size(80, 31)
+        Me.btnBatal.TabIndex = 37
+        Me.btnBatal.Text = "&Batal"
+        Me.btnBatal.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnBatal.UseVisualStyleBackColor = True
+        '
+        'txtKredit
+        '
+        Me.txtKredit.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtKredit.Location = New System.Drawing.Point(594, 153)
+        Me.txtKredit.Name = "txtKredit"
+        Me.txtKredit.Size = New System.Drawing.Size(109, 21)
+        Me.txtKredit.TabIndex = 34
+        '
+        'txtDebet
+        '
+        Me.txtDebet.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDebet.Location = New System.Drawing.Point(481, 153)
+        Me.txtDebet.Name = "txtDebet"
+        Me.txtDebet.Size = New System.Drawing.Size(116, 21)
+        Me.txtDebet.TabIndex = 33
+        '
+        'lblNamaAkun
+        '
+        Me.lblNamaAkun.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.lblNamaAkun.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblNamaAkun.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNamaAkun.Location = New System.Drawing.Point(159, 153)
+        Me.lblNamaAkun.Name = "lblNamaAkun"
+        Me.lblNamaAkun.Size = New System.Drawing.Size(307, 21)
+        Me.lblNamaAkun.TabIndex = 30
+        '
+        'txtNoAkun
+        '
+        Me.txtNoAkun.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNoAkun.Location = New System.Drawing.Point(73, 153)
+        Me.txtNoAkun.Name = "txtNoAkun"
+        Me.txtNoAkun.Size = New System.Drawing.Size(88, 21)
+        Me.txtNoAkun.TabIndex = 31
         '
         'FormAJP
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(796, 533)
+        Me.ClientSize = New System.Drawing.Size(838, 529)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.lblKredit)
         Me.Controls.Add(Me.lblDebet)
-        Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.btnPreview)
         Me.Controls.Add(Me.btnKeluar)
         Me.Controls.Add(Me.btnHapus)
         Me.Controls.Add(Me.btnTambah)
         Me.Controls.Add(Me.btnSimpan)
+        Me.Controls.Add(Me.btnBatal)
         Me.Controls.Add(Me.txtKredit)
-        Me.Controls.Add(Me.btnEdit)
         Me.Controls.Add(Me.txtDebet)
         Me.Controls.Add(Me.lblNamaAkun)
         Me.Controls.Add(Me.txtNoAkun)
@@ -301,32 +348,34 @@ Partial Class FormAJP
         Me.Text = "Ayat Jurnal Penyesuaian"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents ListView1 As System.Windows.Forms.ListView
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents lblPeriode As System.Windows.Forms.Label
+    Friend WithEvents txtTgl As System.Windows.Forms.DateTimePicker
+    Friend WithEvents txtKeterangan As System.Windows.Forms.TextBox
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents btnSearch As System.Windows.Forms.Button
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents lblKredit As System.Windows.Forms.Label
+    Friend WithEvents lblDebet As System.Windows.Forms.Label
     Friend WithEvents btnPreview As System.Windows.Forms.Button
     Friend WithEvents btnKeluar As System.Windows.Forms.Button
     Friend WithEvents btnHapus As System.Windows.Forms.Button
     Friend WithEvents btnTambah As System.Windows.Forms.Button
     Friend WithEvents btnSimpan As System.Windows.Forms.Button
-    Friend WithEvents btnEdit As System.Windows.Forms.Button
+    Friend WithEvents btnBatal As System.Windows.Forms.Button
     Friend WithEvents txtKredit As System.Windows.Forms.TextBox
     Friend WithEvents txtDebet As System.Windows.Forms.TextBox
     Friend WithEvents lblNamaAkun As System.Windows.Forms.Label
     Friend WithEvents txtNoAkun As System.Windows.Forms.TextBox
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents btnSearch As System.Windows.Forms.Button
-    Friend WithEvents lblPeriode As System.Windows.Forms.Label
-    Friend WithEvents txtTgl As System.Windows.Forms.DateTimePicker
-    Friend WithEvents txtKeterangan As System.Windows.Forms.TextBox
-    Friend WithEvents txtNoTransaksi As System.Windows.Forms.TextBox
-    Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents lblKredit As System.Windows.Forms.Label
-    Friend WithEvents lblDebet As System.Windows.Forms.Label
+    Friend WithEvents lblNoTransaksi As System.Windows.Forms.Label
 End Class

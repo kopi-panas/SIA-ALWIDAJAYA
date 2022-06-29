@@ -267,10 +267,6 @@ Public Class FormSetupSaldoAwal
         End Try
     End Function
 
-    'Private Sub FormSetupSaldoAwal_Activated(sender As Object, e As EventArgs) Handles Me.Activated
-    '    KondisiAwal()
-    'End Sub
-
     Private Sub FormSetupSaldoAwal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             KondisiAwal()

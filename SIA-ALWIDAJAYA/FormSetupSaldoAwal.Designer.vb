@@ -84,7 +84,7 @@ Partial Class FormSetupSaldoAwal
         Me.Label6.Font = New System.Drawing.Font("Arial Narrow", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.Location = New System.Drawing.Point(269, 118)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(43, 16)
+        Me.Label6.Size = New System.Drawing.Size(44, 16)
         Me.Label6.TabIndex = 16
         Me.Label6.Text = "Kredit:"
         '
@@ -94,7 +94,7 @@ Partial Class FormSetupSaldoAwal
         Me.Label5.Font = New System.Drawing.Font("Arial Narrow", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(146, 118)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(42, 16)
+        Me.Label5.Size = New System.Drawing.Size(43, 16)
         Me.Label5.TabIndex = 15
         Me.Label5.Text = "Debet:"
         '
@@ -120,7 +120,7 @@ Partial Class FormSetupSaldoAwal
         Me.Label1.Font = New System.Drawing.Font("Arial Narrow", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(76, 58)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(53, 16)
+        Me.Label1.Size = New System.Drawing.Size(54, 16)
         Me.Label1.TabIndex = 12
         Me.Label1.Text = "Tanggal:"
         '
@@ -138,7 +138,7 @@ Partial Class FormSetupSaldoAwal
         Me.Label3.Font = New System.Drawing.Font("Arial Narrow", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(78, 33)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(51, 16)
+        Me.Label3.Size = New System.Drawing.Size(52, 16)
         Me.Label3.TabIndex = 10
         Me.Label3.Text = "Periode:"
         '
@@ -155,7 +155,7 @@ Partial Class FormSetupSaldoAwal
         Me.Label2.Font = New System.Drawing.Font("Arial Narrow", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(73, 84)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(56, 16)
+        Me.Label2.Size = New System.Drawing.Size(57, 16)
         Me.Label2.TabIndex = 7
         Me.Label2.Text = "No Akun:"
         '
@@ -215,18 +215,23 @@ Partial Class FormSetupSaldoAwal
         '
         'ListView1
         '
+        Me.ListView1.FullRowSelect = True
+        Me.ListView1.GridLines = True
         Me.ListView1.HideSelection = False
         Me.ListView1.Location = New System.Drawing.Point(130, 233)
+        Me.ListView1.MultiSelect = False
         Me.ListView1.Name = "ListView1"
         Me.ListView1.Size = New System.Drawing.Size(559, 256)
         Me.ListView1.TabIndex = 13
         Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.ListView1.View = System.Windows.Forms.View.Details
         '
         'FormSetupSaldoAwal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(821, 542)
+        Me.ControlBox = False
         Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.btnCetak)
         Me.Controls.Add(Me.btnKeluar)
