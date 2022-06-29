@@ -31,6 +31,7 @@ Public Class FormSupplier
         txtTelepon.Enabled = True
     End Sub
 
+    'memunculkan tabel supplier ke dalam grid
     Sub MunculGrid()
         Try
             BukaKoneksi()
