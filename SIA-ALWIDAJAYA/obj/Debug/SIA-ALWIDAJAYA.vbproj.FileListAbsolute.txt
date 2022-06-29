@@ -231,6 +231,7 @@ E:\Git\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA_ALWIDAJAYA.FormSupplier.resou
 E:\Git\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA_ALWIDAJAYA.Resources.resources
 E:\Git\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA-ALWIDAJAYA.vbproj.GenerateResource.Cache
 E:\Git\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA_ALWIDAJAYA.FormJurnalDetail.resources
+<<<<<<< HEAD
 F:\Git\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\bin\Debug\SIA-ALWIDAJAYA.exe.config
 F:\Git\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA-ALWIDAJAYA.exe
 F:\Git\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA-ALWIDAJAYA.xml
@@ -269,3 +270,43 @@ F:\Git\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA_ALWIDAJAYA.FormSubJurnalUmum.
 F:\Git\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA_ALWIDAJAYA.FormSupplier.resources
 F:\Git\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA_ALWIDAJAYA.Resources.resources
 F:\Git\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA-ALWIDAJAYA.vbproj.GenerateResource.Cache
+=======
+F:\applications\Git kopi-panas\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\bin\Debug\SIA-ALWIDAJAYA.exe.config
+F:\applications\Git kopi-panas\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA-ALWIDAJAYA.exe
+F:\applications\Git kopi-panas\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA-ALWIDAJAYA.xml
+F:\applications\Git kopi-panas\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA-ALWIDAJAYA.pdb
+F:\applications\Git kopi-panas\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\bin\Debug\SIA-ALWIDAJAYA.exe
+F:\applications\Git kopi-panas\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\bin\Debug\SIA-ALWIDAJAYA.pdb
+F:\applications\Git kopi-panas\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\bin\Debug\SIA-ALWIDAJAYA.xml
+F:\applications\Git kopi-panas\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA-ALWIDAJAYA.vbprojResolveAssemblyReference.cache
+F:\applications\Git kopi-panas\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA_ALWIDAJAYA.FormAktivaTetap.resources
+F:\applications\Git kopi-panas\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA_ALWIDAJAYA.FormCetakAJP.resources
+F:\applications\Git kopi-panas\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA_ALWIDAJAYA.FormCetakAkun.resources
+F:\applications\Git kopi-panas\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA_ALWIDAJAYA.FormAJP.resources
+F:\applications\Git kopi-panas\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA_ALWIDAJAYA.FormCetakNeraca.resources
+F:\applications\Git kopi-panas\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA_ALWIDAJAYA.FormCetakNL.resources
+F:\applications\Git kopi-panas\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA_ALWIDAJAYA.FormCetakPerbModal.resources
+F:\applications\Git kopi-panas\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA_ALWIDAJAYA.FormCetakRL.resources
+F:\applications\Git kopi-panas\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA_ALWIDAJAYA.FormJurnalDetail.resources
+F:\applications\Git kopi-panas\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA_ALWIDAJAYA.FormJurnalUmum.resources
+F:\applications\Git kopi-panas\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA_ALWIDAJAYA.FormLogin.resources
+F:\applications\Git kopi-panas\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA_ALWIDAJAYA.FormMasterBarang.resources
+F:\applications\Git kopi-panas\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA_ALWIDAJAYA.FormMenuJualBeli.resources
+F:\applications\Git kopi-panas\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA_ALWIDAJAYA.FormMenuUtama.resources
+F:\applications\Git kopi-panas\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA_ALWIDAJAYA.FormPenerimaanBarang.resources
+F:\applications\Git kopi-panas\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA_ALWIDAJAYA.FormPengguna.resources
+F:\applications\Git kopi-panas\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA_ALWIDAJAYA.FormPenjualanBarang.resources
+F:\applications\Git kopi-panas\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA_ALWIDAJAYA.FormPeriode.resources
+F:\applications\Git kopi-panas\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA_ALWIDAJAYA.FormAkun.resources
+F:\applications\Git kopi-panas\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA_ALWIDAJAYA.FormPosting.resources
+F:\applications\Git kopi-panas\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA_ALWIDAJAYA.FormSetupSaldoAwal.resources
+F:\applications\Git kopi-panas\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA_ALWIDAJAYA.FormSubAJP.resources
+F:\applications\Git kopi-panas\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA_ALWIDAJAYA.FormSubAkunAJP.resources
+F:\applications\Git kopi-panas\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA_ALWIDAJAYA.FormSubAkunJurnalUmum.resources
+F:\applications\Git kopi-panas\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA_ALWIDAJAYA.FormSubAkunSetup.resources
+F:\applications\Git kopi-panas\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA_ALWIDAJAYA.FormCetakSubJU.resources
+F:\applications\Git kopi-panas\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA_ALWIDAJAYA.FormSubJurnalUmum.resources
+F:\applications\Git kopi-panas\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA_ALWIDAJAYA.FormSupplier.resources
+F:\applications\Git kopi-panas\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA_ALWIDAJAYA.Resources.resources
+F:\applications\Git kopi-panas\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA-ALWIDAJAYA.vbproj.GenerateResource.Cache
+>>>>>>> 11981e4e17a4f498b2a16159c6968a82e949eafc
