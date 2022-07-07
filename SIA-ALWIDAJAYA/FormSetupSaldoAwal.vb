@@ -186,6 +186,7 @@ Public Class FormSetupSaldoAwal
     Private Sub txtKredit_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtKredit.KeyPress
         If e.KeyChar = Chr(13) Then
             btnSimpan.Focus()
+
         End If
 
         If Not ((e.KeyChar >= "0" And e.KeyChar <= "9") Or e.KeyChar = vbBack Or e.KeyChar = ".") Then
@@ -334,5 +335,9 @@ Public Class FormSetupSaldoAwal
                 Catch ex As Exception
                 End Try
         End Select
+    End Sub
+
+    Private Sub txtKredit_TextChanged(sender As Object, e As EventArgs) Handles txtKredit.TextChanged
+
     End Sub
 End Class
