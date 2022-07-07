@@ -1,48 +1,9 @@
 ﻿Imports System.Data.OleDb
 Public Class FormSetupSaldoAwal
 
-    Dim saldoblnlalu As New ClassSaldoblnlalu
+    Dim objSaldoBlnLalu As New ClassSetupsaldo
 
     Public mDK As String
-
-    Sub KondisiAwal()
-        cbPeriode.Text = ""
-        txtTgl.Text = ""
-        txtNoAkun.Text = ""
-        lblNamaAkun.Text = ""
-        txtDebet.Text = "0"
-        txtKredit.Text = "0"
-        mDK = ""
-        txtNoAkun.Focus()
-        btnTambah.Enabled = True
-        btnSimpan.Enabled = False
-        btnHapus.Enabled = False
-        btnEdit.Enabled = False
-        btnKeluar.Enabled = True
-        btnCetak.Enabled = True
-        btnKeluar.Text = "Keluar"
-        btnEdit.Text = "Edit"
-        btnHapus.Text = "Hapus"
-        Tutup()
-    End Sub
-
-    Sub Tutup()
-        cbPeriode.Enabled = False
-        txtTgl.Enabled = False
-        txtNoAkun.Enabled = False
-        lblNamaAkun.Enabled = False
-        txtDebet.Enabled = False
-        txtKredit.Enabled = False
-    End Sub
-
-    Sub Buka()
-        cbPeriode.Enabled = True
-        txtTgl.Enabled = True
-        txtNoAkun.Enabled = True
-        lblNamaAkun.Enabled = True
-        txtDebet.Enabled = True
-        txtKredit.Enabled = True
-    End Sub
 
     Private Sub PosisiList()
         With ListView.Columns
@@ -91,7 +52,7 @@ Public Class FormSetupSaldoAwal
         Dim Pesan As String
 
         Try
-            Query = "SELECT *  FROM tbl_setupsaldoawal"
+            Query = "SELECT * FROM tbl_setupsaldoawal"
             Da = New OleDbDataAdapter(Query, CONN)
             Ds = New DataSet
             Da.Fill(Ds)
@@ -155,7 +116,7 @@ Public Class FormSetupSaldoAwal
         End Try
     End Sub
 
-    Private Sub CariNoAkun()
+    Private Sub CariNoPerkiraan()
         Try
             Query = "SELECT tbl_coa.NoAkun, tbl_coa.NamaAkun FROM(tbl_coa) WHERE (((tbl_coa.NoAkun)='" & txtNoAkun.Text & "'))"
             Da = New OleDbDataAdapter(Query, CONN)
@@ -163,7 +124,7 @@ Public Class FormSetupSaldoAwal
             Da.Fill(Ds)
 
             If Ds.Tables(0).Rows.Count - 1 Then
-                MsgBox("No.Akun ini tidak ada", MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, "Cari no perkiraan")
+                MsgBox("No.Perkiraan ini tidak ada", MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, "Cari no perkiraan")
                 txtNoAkun.Focus()
                 txtNoAkun.Text = ""
                 lblNamaAkun.Text = ""
@@ -176,44 +137,15 @@ Public Class FormSetupSaldoAwal
         End Try
     End Sub
 
-    'Public Sub BersihkanIsian()
-    '    cbPeriode.Enabled = True
-    '    txtTgl.Enabled = True
-    '    txtNoAkun.Enabled = True
-    '    txtNoAkun.Text = ""
-    '    lblNamaAkun.Text = ""
-    '    mDK = ""
-    '    txtDebet.Text = "0"
-    '    txtKredit.Text = "0"
-    'End Sub
-
-    Private Sub btnHapus_Click(sender As Object, e As EventArgs)
-        Try
-            If Len(txtNoAkun.Text) = 0 Then
-                MsgBox("Pilih data yang dihapus", MsgBoxStyle.Information, "Perhatian")
-                txtNoAkun.Focus()
-                Exit Sub
-            Else
-                Dim A As String
-
-                A = MsgBox("Benar akan dihapus...", MsgBoxStyle.OkCancel, "Informasi")
-                Select Case A
-                    Case vbCancel
-                        txtNoAkun.Focus()
-                        Exit Sub
-                    Case vbOK
-                        With saldoblnlalu
-                            .HapusData()
-                        End With
-                        IsiList()
-                        KondisiAwal()
-                        'BersihkanIsian()
-                        'txtKodeRekening.Focus()
-                End Select
-            End If
-        Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Information, "Perhatian")
-        End Try
+    Public Sub BersihkanIsian()
+        cbPeriode.Enabled = True
+        txtTgl.Enabled = True
+        txtNoAkun.Enabled = True
+        txtNoAkun.Text = ""
+        lblNamaAkun.Text = ""
+        mDK = ""
+        txtDebet.Text = "0"
+        txtKredit.Text = "0"
     End Sub
 
     Private Sub txtDebet_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtDebet.KeyPress
@@ -226,8 +158,14 @@ Public Class FormSetupSaldoAwal
         End If
     End Sub
 
+    Private Sub btnKeluar_Click(sender As Object, e As EventArgs) Handles btnKeluar.Click
+        With objSaldoBlnLalu
+            .Keluar()
+        End With
+    End Sub
+
     Private Sub txtNoAkun_DoubleClick(sender As Object, e As EventArgs) Handles txtNoAkun.DoubleClick
-        FormSubAkunSetup.Show()
+        FormSubAkunSetup.ShowDialog()
     End Sub
 
     Private Sub txtNoAkun_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNoAkun.KeyPress
@@ -239,7 +177,7 @@ Public Class FormSetupSaldoAwal
                 If txtTgl.Text = "" Then
                     txtTgl.Focus()
                 Else
-                    CariNoAkun()
+                    CariNoPerkiraan()
                 End If
             End If
         End If
@@ -255,55 +193,8 @@ Public Class FormSetupSaldoAwal
         End If
     End Sub
 
-    Private Sub cbPeriode_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbPeriode.SelectedIndexChanged
-        IsiList()
-    End Sub
-
-    Private Sub ListView_DoubleClick(sender As Object, e As EventArgs) Handles ListView.DoubleClick
-        AmbilData()
-    End Sub
-
-    Private Sub ListView_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListView.SelectedIndexChanged
-        AmbilData()
-        cbPeriode.Enabled = False
-        txtTgl.Enabled = False
-        txtNoAkun.Enabled = False
-    End Sub
-
-    Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
-        Dim A As String
-
-        A = MsgBox("Benar akan di-Edit", MsgBoxStyle.Question + MsgBoxStyle.OkCancel, "Informasi")
-        Select Case A
-            Case vbCancel
-                KondisiAwal()
-                'BersihkanIsian()
-                'txtKodeRekening.Focus()
-                Exit Sub
-            Case vbOK
-                Try
-                    With saldoblnlalu
-                        .EditData()
-                    End With
-                    IsiList()
-                Catch ex As Exception
-                End Try
-        End Select
-    End Sub
-
-    Private Sub btnCetak_Click(sender As Object, e As EventArgs) Handles btnCetak.Click
-        'If Len(cboPeriode.Text) = 0 Then
-        '    MsgBox("Pilih periode yang akan dicetak", MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, "Pesan")
-        '    cboPeriode.Focus()
-        'Else
-        '    Try
-        '        frmCetakMutasiSaldo.CrystalReportViewer1.SelectionFormula = "{tmpSaldoBlnLalu.Periode} = '" & cboPeriode.Text & "'"
-        '        frmCetakMutasiSaldo.CrystalReportViewer1.Dock = DockStyle.Fill
-        '        frmCetakMutasiSaldo.CrystalReportViewer1.RefreshReport()
-        '        frmCetakMutasiSaldo.ShowDialog()
-        '    Catch ex As Exception
-        '    End Try
-        'End If
+    Private Sub FormSetupSaldoAwal_Activated(sender As Object, e As EventArgs) Handles Me.Activated
+        cbPeriode.Focus()
     End Sub
 
     Private Sub FormSetupSaldoAwal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -338,24 +229,110 @@ Public Class FormSetupSaldoAwal
                 txtKredit.Text = txtKredit.Text
             End If
 
-            With saldoblnlalu
+            With objSaldoBlnLalu
                 .SimpanData()
             End With
             IsiList()
-            KondisiAwal()
-            'BersihkanIsian()
-            'txtNoAkun.Focus()
+            BersihkanIsian()
+            txtNoAkun.Focus()
         Catch ex As Exception
+            MsgBox(ex.Message)
         End Try
     End Sub
 
+    Private Sub cbPeriode_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cbPeriode.KeyPress
+        If e.KeyChar = Chr(13) Then
+            If cbPeriode.Text = "" Then
+                MsgBox("Periode masih kosong, silahkan diisi", MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, "Pesan")
+                cbPeriode.Focus()
+            Else
+                txtTgl.Focus()
+            End If
+        End If
+    End Sub
+
+    Private Sub cbPeriode_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbPeriode.SelectedIndexChanged
+        IsiList()
+    End Sub
+
+    Private Sub txtTgl_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtTgl.KeyPress
+        If e.KeyChar = Chr(13) Then
+            txtNoAkun.Focus()
+        End If
+    End Sub
+
     Private Sub btnTambah_Click(sender As Object, e As EventArgs) Handles btnTambah.Click
-        With saldoblnlalu
+        With objSaldoBlnLalu
             .TambahData()
         End With
     End Sub
 
-    Private Sub btnKeluar_Click(sender As Object, e As EventArgs) Handles btnKeluar.Click
-        Me.Close()
+    Private Sub btnHapus_Click(sender As Object, e As EventArgs) Handles btnHapus.Click
+        Try
+            If Len(txtNoAkun.Text) = 0 Then
+                MsgBox("Pilih data yang dihapus", MsgBoxStyle.Information, "Perhatian")
+                txtNoAkun.Focus()
+                Exit Sub
+            Else
+                Dim A As String
+
+                A = MsgBox("Benar akan dihapus...", MsgBoxStyle.OkCancel, "Informasi")
+                Select Case A
+                    Case vbCancel
+                        txtNoAkun.Focus()
+                        Exit Sub
+                    Case vbOK
+                        With objSaldoBlnLalu
+                            .HapusData()
+                        End With
+                        IsiList()
+                        BersihkanIsian()
+                        txtNoAkun.Focus()
+                End Select
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Information, "Perhatian")
+        End Try
+    End Sub
+
+    Private Sub ListView_DoubleClick(sender As Object, e As EventArgs) Handles ListView.DoubleClick
+        AmbilData()
+    End Sub
+
+    Private Sub ListView_KeyUp(sender As Object, e As KeyEventArgs) Handles ListView.KeyUp
+        If e.KeyCode = Keys.Escape Then
+            cbPeriode.Enabled = True
+            txtTgl.Enabled = True
+            txtNoAkun.Enabled = True
+            BersihkanIsian()
+            cbPeriode.Focus()
+        End If
+    End Sub
+
+    Private Sub ListView_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListView.SelectedIndexChanged
+        AmbilData()
+        cbPeriode.Enabled = False
+        txtTgl.Enabled = False
+        txtNoAkun.Enabled = False
+    End Sub
+
+    Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
+        Dim A As String
+
+        A = MsgBox("Benar akan di-Edit", MsgBoxStyle.Question + MsgBoxStyle.OkCancel, "Informasi")
+        Select Case A
+            Case vbCancel
+                BersihkanIsian()
+                txtNoAkun.Focus()
+                Exit Sub
+            Case vbOK
+                Try
+                    With objSaldoBlnLalu
+                        .EditData()
+                    End With
+                    IsiList()
+                Catch ex As Exception
+                End Try
+        End Select
     End Sub
 End Class

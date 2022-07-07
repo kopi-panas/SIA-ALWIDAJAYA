@@ -115,6 +115,7 @@ Public Class FormPengguna
             Else
                 BukaKoneksi()
                 Dim EditData As String = "Update tbl_pengguna set NamaPengguna='" & txtNamaPengguna.Text & "',Password='" & txtPassword.Text & "',level='" & cbLevel.Text & "' where KodePengguna= '" & txtKodePengguna.Text & "'"
+                'Dim EditData As String = "Update tbl_pengguna set NamaPengguna='" & txtNamaPengguna.Text & "',password='" & txtPassword.Text & "' where KodePengguna= '" & txtKodePengguna.Text & "'"
                 Command = New OleDbCommand(EditData, CONN)
                 Command.ExecuteNonQuery()
                 MsgBox("Data berhasil di Update", MsgBoxStyle.Information, "")

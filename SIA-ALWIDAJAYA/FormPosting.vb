@@ -49,7 +49,7 @@ Public Class FormPosting
                 MsgBox("Silahkan pilih periode yang diposting", vbExclamation + MsgBoxStyle.OkOnly, "Pesan")
                 cbPeriode.Focus()
             Else
-                Query = "SELECT Periode, Keterangan FROM tblMasterPeriode WHERE Periode = '" & cbPeriode.Text & "'"
+                Query = "SELECT Periode, Keterangan FROM tbl_periode WHERE Periode = '" & cbPeriode.Text & "'"
                 Da = New OleDbDataAdapter(Query, CONN)
                 Ds = New DataSet
                 Da.Fill(Ds)
@@ -84,7 +84,7 @@ Public Class FormPosting
                 End If
             End If
         Catch ex As Exception
-
+            MsgBox(ex.Message)
         End Try
     End Sub
 

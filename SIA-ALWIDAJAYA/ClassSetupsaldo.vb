@@ -1,6 +1,5 @@
 ﻿Imports System.Data.OleDb
-Public Class ClassSaldoblnlalu
-
+Public Class ClassSetupsaldo
     Private mPeriode As String
     Private mTgl As Date
     Private mKodeRekening As String
@@ -10,9 +9,8 @@ Public Class ClassSaldoblnlalu
 
     Public Sub TambahData()
         With FormSetupSaldoAwal
-            .KondisiAwal()
-            '.BersihkanIsian()
-            '.txtNoAkun.Focus()
+            .BersihkanIsian()
+            .txtNoAkun.Focus()
         End With
     End Sub
 
@@ -41,7 +39,7 @@ Public Class ClassSaldoblnlalu
             mDebet = FormSetupSaldoAwal.txtDebet.Text
             mKredit = FormSetupSaldoAwal.txtKredit.Text
 
-            Query = "UPDATE tbl_saldoblnlalu SET  Debet = '" & mDebet & "', Kredit = '" & mKredit & "'  WHERE NoAkun = '" & mKodeRekening & "'"
+            Query = "UPDATE tbl_saldoblnlalu SET Debet = '" & mDebet & "', Kredit = '" & mKredit & "'  WHERE NoAkun = '" & mKodeRekening & "'"
             Da = New OleDbDataAdapter(Query, CONN)
             Ds = New DataSet
             Da.Fill(Ds)
@@ -67,7 +65,8 @@ Public Class ClassSaldoblnlalu
     End Function
 
     Public Sub Keluar()
-        'frmTransaksiSaloBlnLalu.Dispose()
+        FormSetupSaldoAwal.Dispose()
     End Sub
+
 
 End Class

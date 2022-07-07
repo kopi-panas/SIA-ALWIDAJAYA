@@ -81,7 +81,7 @@
     <Compile Include="ClassAktivaTetap.vb" />
     <Compile Include="ClassJurnalUmum.vb" />
     <Compile Include="ClassPosting.vb" />
-    <Compile Include="ClassSaldoblnlalu.vb" />
+    <Compile Include="ClassSetupsaldo.vb" />
     <Compile Include="DataSetBarang.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
