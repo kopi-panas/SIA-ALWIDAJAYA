@@ -261,7 +261,7 @@ Public Class ClassPosting
     Public Sub InsertKeteranganSaldoAwal()
         mPeriode = FormPosting.cbPeriode.Text
         Try
-            Query = "SELECT *  FROM tbl_setupsaldoawal"
+            Query = "SELECT * FROM tbl_setupsaldoawal"
             Da = New OleDbDataAdapter(Query, CONN)
             Ds = New DataSet
             Da.Fill(Ds)

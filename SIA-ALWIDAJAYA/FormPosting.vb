@@ -77,10 +77,10 @@ Public Class FormPosting
                         .UpDateSaldoAwal()
                         .SaldoBulanLalu()
                         .InsertKeteranganSaldoAwal() 'Menerangkan bahwa setup saldo awal sudah diPosted
-                        MsgBox("Proses posting sudah selesai...", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Pesan prosesposting")
+                        MsgBox("Proses posting sudah selesai...", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "Pesan Proses Posting")
                     End With
                 Else
-                    MsgBox("Maaf... periode ini sudah diposting", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Pesan prosesposting")
+                    MsgBox("Maaf... periode ini sudah diposting", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Pesan Proses Posting")
                 End If
             End If
         Catch ex As Exception

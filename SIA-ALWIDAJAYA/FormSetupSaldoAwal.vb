@@ -208,7 +208,10 @@ Public Class FormSetupSaldoAwal
 
     Private Sub btnSimpan_Click(sender As Object, e As EventArgs) Handles btnSimpan.Click
         Try
-            If Val(txtDebet.Text) > Val(txtKredit.Text) Then
+            If cbPeriode.Text = "" Or txtNoAkun.Text = "" Or lblNamaAkun.Text = "" Or txtDebet.Text = "" Or txtKredit.Text = "" Then
+                MsgBox("Pastikan Data diisi Lengkap!", MsgBoxStyle.Information, "")
+
+            ElseIf Val(txtDebet.Text) > Val(txtKredit.Text) Then
                 mDK = "D"
             Else
                 mDK = "K"
@@ -225,6 +228,8 @@ Public Class FormSetupSaldoAwal
             Else
                 txtKredit.Text = txtKredit.Text
             End If
+            
+            'End If
 
             With objSaldoBlnLalu
                 .SimpanData()

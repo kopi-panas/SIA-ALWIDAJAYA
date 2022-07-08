@@ -87,6 +87,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetBarang.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataSetNeraca.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetNeraca.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FormAktivaTetap.Designer.vb">
       <DependentUpon>FormAktivaTetap.vb</DependentUpon>
     </Compile>
@@ -387,6 +392,17 @@
     </None>
     <None Include="DataSetBarang.xss">
       <DependentUpon>DataSetBarang.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetNeraca.xsc">
+      <DependentUpon>DataSetNeraca.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetNeraca.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetNeraca.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DataSetNeraca.xss">
+      <DependentUpon>DataSetNeraca.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
