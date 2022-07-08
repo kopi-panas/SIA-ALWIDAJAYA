@@ -7,13 +7,6 @@ Public Class ClassSetupsaldo
     Private mDebet As Long
     Private mKredit As Long
 
-    Public Sub TambahData()
-        With FormSetupSaldoAwal
-            .BersihkanIsian()
-            .txtNoAkun.Focus()
-        End With
-    End Sub
-
     Public Function SimpanData()
         Try
             mPeriode = FormSetupSaldoAwal.cbPeriode.Text
@@ -63,10 +56,5 @@ Public Class ClassSetupsaldo
             Return 0
         End Try
     End Function
-
-    Public Sub Keluar()
-        FormSetupSaldoAwal.Dispose()
-    End Sub
-
 
 End Class

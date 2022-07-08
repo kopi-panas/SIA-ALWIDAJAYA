@@ -92,7 +92,7 @@ Partial Class FormCetakRL
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(321, 161)
+        Me.ClientSize = New System.Drawing.Size(317, 157)
         Me.ControlBox = False
         Me.Controls.Add(Me.btnCetak)
         Me.Controls.Add(Me.btnKeluar)

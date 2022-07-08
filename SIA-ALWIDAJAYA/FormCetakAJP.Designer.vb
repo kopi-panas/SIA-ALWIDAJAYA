@@ -61,7 +61,7 @@ Partial Class FormCetakAJP
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(152, 203)
+        Me.Panel1.Size = New System.Drawing.Size(152, 199)
         Me.Panel1.TabIndex = 0
         '
         'btnNS
@@ -123,7 +123,7 @@ Partial Class FormCetakAJP
         Me.AJP.Dock = System.Windows.Forms.DockStyle.Fill
         Me.AJP.Location = New System.Drawing.Point(152, 0)
         Me.AJP.Name = "AJP"
-        Me.AJP.Size = New System.Drawing.Size(285, 203)
+        Me.AJP.Size = New System.Drawing.Size(281, 199)
         Me.AJP.TabIndex = 1
         '
         'btnCetakAJP
@@ -177,7 +177,7 @@ Partial Class FormCetakAJP
         Me.bukubesar.Dock = System.Windows.Forms.DockStyle.Fill
         Me.bukubesar.Location = New System.Drawing.Point(152, 0)
         Me.bukubesar.Name = "bukubesar"
-        Me.bukubesar.Size = New System.Drawing.Size(285, 203)
+        Me.bukubesar.Size = New System.Drawing.Size(281, 199)
         Me.bukubesar.TabIndex = 124
         '
         'btnCetakBB
@@ -231,7 +231,7 @@ Partial Class FormCetakAJP
         Me.neracasaldo.Dock = System.Windows.Forms.DockStyle.Fill
         Me.neracasaldo.Location = New System.Drawing.Point(152, 0)
         Me.neracasaldo.Name = "neracasaldo"
-        Me.neracasaldo.Size = New System.Drawing.Size(285, 203)
+        Me.neracasaldo.Size = New System.Drawing.Size(281, 199)
         Me.neracasaldo.TabIndex = 126
         '
         'btnCetakNS
@@ -282,7 +282,7 @@ Partial Class FormCetakAJP
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(437, 203)
+        Me.ClientSize = New System.Drawing.Size(433, 199)
         Me.ControlBox = False
         Me.Controls.Add(Me.AJP)
         Me.Controls.Add(Me.bukubesar)

@@ -24,7 +24,6 @@ Partial Class FormSetupSaldoAwal
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormSetupSaldoAwal))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.btnTambah = New System.Windows.Forms.Button()
         Me.txtKredit = New System.Windows.Forms.TextBox()
         Me.txtDebet = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -47,10 +46,13 @@ Partial Class FormSetupSaldoAwal
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.btnTambah)
+        Me.GroupBox1.Controls.Add(Me.btnHapus)
+        Me.GroupBox1.Controls.Add(Me.btnCetak)
+        Me.GroupBox1.Controls.Add(Me.btnEdit)
         Me.GroupBox1.Controls.Add(Me.txtKredit)
         Me.GroupBox1.Controls.Add(Me.txtDebet)
         Me.GroupBox1.Controls.Add(Me.Label6)
+        Me.GroupBox1.Controls.Add(Me.btnSimpan)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.lblNamaAkun)
         Me.GroupBox1.Controls.Add(Me.txtTgl)
@@ -65,19 +67,6 @@ Partial Class FormSetupSaldoAwal
         Me.GroupBox1.Size = New System.Drawing.Size(810, 177)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
-        '
-        'btnTambah
-        '
-        Me.btnTambah.Font = New System.Drawing.Font("Microsoft Tai Le", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnTambah.Image = CType(resources.GetObject("btnTambah.Image"), System.Drawing.Image)
-        Me.btnTambah.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnTambah.Location = New System.Drawing.Point(408, 132)
-        Me.btnTambah.Name = "btnTambah"
-        Me.btnTambah.Size = New System.Drawing.Size(80, 31)
-        Me.btnTambah.TabIndex = 29
-        Me.btnTambah.Text = "&Tambah"
-        Me.btnTambah.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnTambah.UseVisualStyleBackColor = True
         '
         'txtKredit
         '
@@ -183,7 +172,7 @@ Partial Class FormSetupSaldoAwal
         Me.ListView.FullRowSelect = True
         Me.ListView.GridLines = True
         Me.ListView.HideSelection = False
-        Me.ListView.Location = New System.Drawing.Point(62, 197)
+        Me.ListView.Location = New System.Drawing.Point(61, 198)
         Me.ListView.MultiSelect = False
         Me.ListView.Name = "ListView"
         Me.ListView.Size = New System.Drawing.Size(687, 242)
@@ -196,7 +185,7 @@ Partial Class FormSetupSaldoAwal
         Me.btnCetak.Font = New System.Drawing.Font("Microsoft Tai Le", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCetak.Image = CType(resources.GetObject("btnCetak.Image"), System.Drawing.Image)
         Me.btnCetak.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCetak.Location = New System.Drawing.Point(299, 456)
+        Me.btnCetak.Location = New System.Drawing.Point(649, 132)
         Me.btnCetak.Name = "btnCetak"
         Me.btnCetak.Size = New System.Drawing.Size(80, 31)
         Me.btnCetak.TabIndex = 28
@@ -209,7 +198,7 @@ Partial Class FormSetupSaldoAwal
         Me.btnKeluar.Font = New System.Drawing.Font("Microsoft Tai Le", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnKeluar.Image = CType(resources.GetObject("btnKeluar.Image"), System.Drawing.Image)
         Me.btnKeluar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnKeluar.Location = New System.Drawing.Point(659, 456)
+        Me.btnKeluar.Location = New System.Drawing.Point(668, 446)
         Me.btnKeluar.Name = "btnKeluar"
         Me.btnKeluar.Size = New System.Drawing.Size(80, 31)
         Me.btnKeluar.TabIndex = 27
@@ -222,7 +211,7 @@ Partial Class FormSetupSaldoAwal
         Me.btnHapus.Font = New System.Drawing.Font("Microsoft Tai Le", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnHapus.Image = CType(resources.GetObject("btnHapus.Image"), System.Drawing.Image)
         Me.btnHapus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnHapus.Location = New System.Drawing.Point(213, 456)
+        Me.btnHapus.Location = New System.Drawing.Point(563, 132)
         Me.btnHapus.Name = "btnHapus"
         Me.btnHapus.Size = New System.Drawing.Size(80, 31)
         Me.btnHapus.TabIndex = 26
@@ -235,7 +224,7 @@ Partial Class FormSetupSaldoAwal
         Me.btnSimpan.Font = New System.Drawing.Font("Microsoft Tai Le", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSimpan.Image = CType(resources.GetObject("btnSimpan.Image"), System.Drawing.Image)
         Me.btnSimpan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSimpan.Location = New System.Drawing.Point(62, 456)
+        Me.btnSimpan.Location = New System.Drawing.Point(412, 132)
         Me.btnSimpan.Name = "btnSimpan"
         Me.btnSimpan.Size = New System.Drawing.Size(80, 31)
         Me.btnSimpan.TabIndex = 24
@@ -248,7 +237,7 @@ Partial Class FormSetupSaldoAwal
         Me.btnEdit.Font = New System.Drawing.Font("Microsoft Tai Le", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEdit.Image = CType(resources.GetObject("btnEdit.Image"), System.Drawing.Image)
         Me.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnEdit.Location = New System.Drawing.Point(148, 456)
+        Me.btnEdit.Location = New System.Drawing.Point(498, 132)
         Me.btnEdit.Name = "btnEdit"
         Me.btnEdit.Size = New System.Drawing.Size(62, 31)
         Me.btnEdit.TabIndex = 25
@@ -262,13 +251,9 @@ Partial Class FormSetupSaldoAwal
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(810, 542)
         Me.ControlBox = False
-        Me.Controls.Add(Me.btnCetak)
-        Me.Controls.Add(Me.btnKeluar)
-        Me.Controls.Add(Me.btnHapus)
-        Me.Controls.Add(Me.btnSimpan)
-        Me.Controls.Add(Me.btnEdit)
         Me.Controls.Add(Me.ListView)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.btnKeluar)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FormSetupSaldoAwal"
@@ -299,5 +284,4 @@ Partial Class FormSetupSaldoAwal
     Friend WithEvents btnHapus As System.Windows.Forms.Button
     Friend WithEvents btnSimpan As System.Windows.Forms.Button
     Friend WithEvents btnEdit As System.Windows.Forms.Button
-    Friend WithEvents btnTambah As System.Windows.Forms.Button
 End Class

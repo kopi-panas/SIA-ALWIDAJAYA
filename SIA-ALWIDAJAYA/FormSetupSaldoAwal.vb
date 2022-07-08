@@ -62,7 +62,6 @@ Public Class FormSetupSaldoAwal
                 txtDebet.Enabled = True
                 txtKredit.Enabled = True
                 txtNoAkun.Enabled = True
-                btnTambah.Enabled = True
                 btnSimpan.Enabled = True
                 btnEdit.Enabled = True
                 btnHapus.Enabled = True
@@ -75,7 +74,6 @@ Public Class FormSetupSaldoAwal
                 txtDebet.Enabled = False
                 txtKredit.Enabled = False
                 txtNoAkun.Enabled = False
-                btnTambah.Enabled = False
                 btnSimpan.Enabled = False
                 btnEdit.Enabled = False
                 btnHapus.Enabled = False
@@ -159,9 +157,7 @@ Public Class FormSetupSaldoAwal
     End Sub
 
     Private Sub btnKeluar_Click(sender As Object, e As EventArgs) Handles btnKeluar.Click
-        With objSaldoBlnLalu
-            .Keluar()
-        End With
+        Me.Close()
     End Sub
 
     Private Sub txtNoAkun_DoubleClick(sender As Object, e As EventArgs) Handles txtNoAkun.DoubleClick
@@ -260,12 +256,6 @@ Public Class FormSetupSaldoAwal
         If e.KeyChar = Chr(13) Then
             txtNoAkun.Focus()
         End If
-    End Sub
-
-    Private Sub btnTambah_Click(sender As Object, e As EventArgs) Handles btnTambah.Click
-        With objSaldoBlnLalu
-            .TambahData()
-        End With
     End Sub
 
     Private Sub btnHapus_Click(sender As Object, e As EventArgs) Handles btnHapus.Click
