@@ -24,21 +24,33 @@ Public Class ClassPosting
     Public Sub InsertBukuBesar()
         mPeriode = FormPosting.cbPeriode.Text
         Try
+            'pengambilan data pada tabel jurnal umum
             Query = "SELECT DISTINCT tbl_jurnalumum.Periode, tbl_jurnalumum.Status FROM tbl_jurnalumum WHERE (((tbl_jurnalumum.Periode)='" & mPeriode & "') AND ((tbl_jurnalumum.Status)='" & "UnPosted" & "'))"
             Da = New OleDbDataAdapter(Query, CONN)
             Ds = New DataSet
             Da.Fill(Ds)
 
+            'Command = New OleDbCommand(Query, CONN)
+            'Rd = Command.ExecuteReader
+            'Rd.Read()
+
+            'Dim Periode As String = Rd.Item("Periode")
+            'Dim Staus As String = Rd.Item("Status")
+            'Dim noTransaksi As String = Rd.Item("NoTransaksi")
+
+            'akhir pengambilan data jurnal umum
+
             If Ds.Tables(0).Rows.Count = 0 Then
-                InsertSaldoBulanlalu()
+                'InsertSaldoBulanlalu()
             Else
-                InsertSaldoBulanlalu()
+                'InsertSaldoBulanlalu()
                 Query = "INSERT INTO tbl_bbjurnal SELECT tbl_jurnalumum.Periode, tbl_jurnalumum.NoTransaksi, tbl_jurnalumum.TglTransaksi, tbl_detailjurnal.NoAkun, tbl_jurnalumum.Keterangan, tbl_detailjurnal.DK, tbl_detailjurnal.Debet, tbl_detailjurnal.Kredit, tbl_jurnalumum.Status FROM (tbl_detailjurnal LEFT JOIN tbl_jurnalumum ON tbl_detailjurnal.NoTransaksi = tbl_jurnalumum.NoTransaksi) LEFT JOIN tbl_coa ON tbl_detailjurnal.NoAkun = tbl_coa.NoAkun WHERE (((tbl_jurnalumum.Periode)='" & mPeriode & "') AND ((tbl_jurnalumum.Status)= '" & "UnPosted" & "'))"
                 Da = New OleDbDataAdapter(Query, CONN)
                 Ds = New DataSet
                 Da.Fill(Ds)
             End If
         Catch ex As Exception
+            MsgBox("Insert Buku Besar " & ex.Message)
         End Try
     End Sub
 
@@ -51,6 +63,7 @@ Public Class ClassPosting
             Ds = New DataSet
             Da.Fill(Ds)
         Catch ex As Exception
+            MsgBox("Inser Buku Besar AJP " & ex.Message)
         End Try
     End Sub
 
@@ -63,6 +76,7 @@ Public Class ClassPosting
             Ds = New DataSet
             Da.Fill(Ds)
         Catch ex As Exception
+            MsgBox("Insert Naraca Saldo" & ex.Message)
         End Try
     End Sub
 
@@ -75,6 +89,7 @@ Public Class ClassPosting
             Ds = New DataSet
             Da.Fill(Ds)
         Catch ex As Exception
+            MsgBox("Insert Naraca Saldo AJP " & ex.Message)
         End Try
     End Sub
 
@@ -87,6 +102,7 @@ Public Class ClassPosting
             Ds = New DataSet
             Da.Fill(Ds)
         Catch ex As Exception
+            MsgBox("Insert Naraca Lajur " & ex.Message)
         End Try
     End Sub
 
@@ -117,6 +133,7 @@ Public Class ClassPosting
                 Da.Fill(Ds)
             End If
         Catch ex As Exception
+            MsgBox("Insert Rugilaba" & ex.Message)
         End Try
     End Sub
 

@@ -43,7 +43,7 @@ Partial Class FormPosting
         Me.GroupBox1.Font = New System.Drawing.Font("Arial Narrow", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(0, 0)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(408, 166)
+        Me.GroupBox1.Size = New System.Drawing.Size(391, 166)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Pilih Periode:"
@@ -113,7 +113,7 @@ Partial Class FormPosting
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(408, 233)
+        Me.ClientSize = New System.Drawing.Size(391, 229)
         Me.ControlBox = False
         Me.Controls.Add(Me.btnPosting)
         Me.Controls.Add(Me.btnKeluar)

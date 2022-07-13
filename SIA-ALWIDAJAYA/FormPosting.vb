@@ -62,21 +62,21 @@ Public Class FormPosting
 
                 If mKeterangan = "UnPosted" Then
                     With objPosting
-                        .InsertBukuBesar()
-                        .InsertBukuBesarAJP()
-                        .InsertNeracaSaldo()
-                        .InsertNeracaSaldoAJP()
+                        .InsertBukuBesar() '-> sudah jalan
+                        .InsertBukuBesarAJP() '-> sudah jalan
+                        .InsertNeracaSaldo()  '-> sudah jalan
+                        .InsertNeracaSaldoAJP()  '-> sudah jalan
                         .InsertNeracaLajur()
-                        .InsertRugiLaba()
-                        .PerubahanModal()
-                        .UpdatePrive()
-                        .NilaiNeraca()
-                        .NilaiNeracaAkumulasi()
-                        .UpdateModal()
-                        .InsertLabaTakDibagi()
-                        .UpDateSaldoAwal()
-                        .SaldoBulanLalu()
-                        .InsertKeteranganSaldoAwal() 'Menerangkan bahwa setup saldo awal sudah diPosted
+                        '.InsertRugiLaba()
+                        '.PerubahanModal()
+                        '.UpdatePrive()
+                        '.NilaiNeraca()
+                        '.NilaiNeracaAkumulasi()
+                        '.UpdateModal()
+                        '.InsertLabaTakDibagi()
+                        '.UpDateSaldoAwal()
+                        '.SaldoBulanLalu()
+                        '.InsertKeteranganSaldoAwal() 'Menerangkan bahwa setup saldo awal sudah diPosted
                         MsgBox("Proses posting sudah selesai...", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "Pesan Proses Posting")
                     End With
                 Else

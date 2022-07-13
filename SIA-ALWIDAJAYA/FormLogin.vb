@@ -2,8 +2,8 @@
 Public Class FormLogin
 
     Private Sub FormLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        txtkode.Text = "ADM002"
-        txtSandi.Text = "admin"
+        txtkode.Text = "ADM001"
+        txtSandi.Text = "2001"
         txtkode.Focus()
     End Sub
 

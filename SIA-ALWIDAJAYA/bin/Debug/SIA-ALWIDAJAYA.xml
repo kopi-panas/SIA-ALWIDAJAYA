@@ -6,18 +6,9 @@ SIA-ALWIDAJAYA
 </name>
 </assembly>
 <members>
-<member name="P:SIA_ALWIDAJAYA.My.Resources.Resources.ResourceManager">
+<member name="T:SIA_ALWIDAJAYA.DataSetNeraca">
 	<summary>
-  Returns the cached ResourceManager instance used by this class.
-</summary>
-</member><member name="P:SIA_ALWIDAJAYA.My.Resources.Resources.Culture">
-	<summary>
-  Overrides the current thread's CurrentUICulture property for all
-  resource lookups using this strongly typed resource class.
-</summary>
-</member><member name="T:SIA_ALWIDAJAYA.My.Resources.Resources">
-	<summary>
-  A strongly-typed resource class, for looking up localized strings, etc.
+Represents a strongly typed in-memory cache of data.
 </summary>
 </member><member name="T:SIA_ALWIDAJAYA.DataSetBarang.tbl_barangDataTable">
 	<summary>
@@ -82,6 +73,19 @@ Used to sort self-referenced table's rows
 </member><member name="T:SIA_ALWIDAJAYA.DataSetBarangTableAdapters.TableAdapterManager">
 	<summary>
 TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="P:SIA_ALWIDAJAYA.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:SIA_ALWIDAJAYA.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:SIA_ALWIDAJAYA.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
 </summary>
 </member>
 </members>
