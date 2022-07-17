@@ -398,3 +398,5 @@ F:\Git\kopi-panas\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\RdlCompile.compiled
 F:\Git\kopi-panas\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA-ALWIDAJAYA.exe
 F:\Git\kopi-panas\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA-ALWIDAJAYA.xml
 F:\Git\kopi-panas\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA-ALWIDAJAYA.pdb
+F:\Git\kopi-panas\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA-ALWIDAJAYA.vbprojResolveAssemblyReference.cache
+F:\Git\kopi-panas\SIA-ALWIDAJAYA\SIA-ALWIDAJAYA\obj\Debug\SIA_ALWIDAJAYA.Form1.resources
